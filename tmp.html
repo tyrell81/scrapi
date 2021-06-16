@@ -1,0 +1,2128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"  dir="ltr" lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TMSN7ZM');</script>
+<!-- End Google Tag Manager -->
+<script> dataLayer.push({'currencyCode': 'USD'}); </script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"6e7fff0139",applicationID:"162370612"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[u.now()].concat(f(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(8),f=t(9),c=t("ee").get("tracer"),u=t("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(t,e){s[e]=i(p+e,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),t,n],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(l+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){function r(){return f.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,f=t(10);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],4:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],5:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof m&&!g){var e=Math.round(t.timeStamp),n={type:t.type};e<=p.now()?n.fid=p.now()-e:e>p.offset&&e<=Date.now()?(e-=p.offset,n.fid=p.now()-e):e=p.now(),g=!0,d("timing",["fi",e,n])}}function f(t){d("pageHide",[p.now(),t])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var c,u,s,d=t("handle"),p=t("loader"),l=t(7),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){c=new PerformanceObserver(r);try{c.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,h=["click","keydown","mousedown","pointerdown","touchstart"];h.forEach(function(t){document.addEventListener(t,a,!1)})}l(f)}},{}],6:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],7:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],8:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],9:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],10:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,c,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var f=e(i),c=v(n),u=c.length,s=0;s<u;s++)c[s].apply(f,r);var p=d[w[n]];return p&&p.push([b,n,r,f]),f}}function o(t,e){y[t]=v(t).concat(e)}function m(t,e){var n=y[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function v(t){return y[t]||[]}function g(t){return p[t]=p[t]||i(n)}function h(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var y={},w={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:e,buffer:h,abort:f,aborted:!1};return b}function o(t){return u(t,c,a)}function a(){return new r}function f(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var c="nr@context",u=t("gos"),s=t(8),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!R++){var t=M.info=NREUM.info,e=v.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();c(E,function(e,n){t[e]||(t[e]=n)});var n=a();f("mark",["onload",n+M.offset],null,"api"),f("timing",["load",n]);var r=v.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===v.readyState&&o()}function o(){f("mark",["domContent",a()+M.offset],null,"api")}var a=t(3),f=t("handle"),c=t(8),u=t("ee"),s=t(6),d=t(4),p=t(2),l=p.getConfiguration("ssl")===!1?"http":"https",m=window,v=m.document,g="addEventListener",h="attachEvent",y=m.XMLHttpRequest,w=y&&y.prototype,b=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:y,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var x=""+location,E={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1209.min.js"},O=y&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),M=e.exports={offset:a.getLastTimestamp(),now:a,origin:x,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(5),v[g]?(v[g]("DOMContentLoaded",o,!1),m[g]("load",r,!1)):(v[h]("onreadystatechange",i),m[h]("onload",r)),f("mark",["firstbyte",a.getLastTimestamp()],null,"api");var R=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,c,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,c],s],t)}f(n+"start",[o,a,c],s,u);try{return p=e.apply(a,o)}catch(m){throw f(n+"err",[o,a,m],s,u),m}finally{f(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var f,c,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)c=e[u],f=t[c],a(f)||(t[c]=n(f,s?c+r:r,i,c,o))}function f(n,r,o,a){if(!m||e){var f=m;m=!0;try{t.emit(n,r,o,e,a)}catch(c){i([c,n,r,o],t)}m=f}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function f(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function c(t,e,n){var r=t[e];t[e]=f(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(9),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;e.exports=r,e.exports.wrapFunction=f,e.exports.wrapInPlace=c,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+
+	<title>Seiko Automatic SNK795 SNK795K1 SNK795K Men's Watch</title>
+	<meta name="keywords" content="Seiko Watches, Seiko Men's Watches, Men's Watches, Seiko Automatic" />
+	<meta name="description" content="Best online shop for Seiko Automatic SNK795 SNK795K1 SNK795K Men's Watch has Automatic (Self-Wind), Caliber 7S26 (21 Jewels), Water resistant: 30m , Day and date calendar, Luminous hands and hour markers, Crystal see-thru Caseback." />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="authors" content="CreationWatches Team" />
+<meta name="generator" content="" />
+<!-- Open Graph Implementation --> 
+
+<meta property="og:title" content="Seiko Automatic SNK795 SNK795K1 SNK795K Men's Watch" />
+<meta property="og:type" content="Website" />
+<meta property="og:site_name" content="Creation Watches"/>
+<meta property="og:url" content="https://www.creationwatches.com/products/seiko-automatic-sports-89/seiko-automatic-snk795-snk795k1-snk795k-mens-watch-1709.html?currency=USD" />
+<meta property="og:image" content="http://cdn.creationwatches.com/products/images/SNK795K1.jpg" />
+<meta property="og:description" content="Best online shop for Seiko Automatic SNK795 SNK795K1 SNK795K Men's Watch has Automatic (Self-Wind), Caliber 7S26 (21 Jewels), Water resistant: 30m , Day and date calendar, Luminous hands and hour markers, Crystal see-thru Caseback."/>
+
+
+<base href="https://www.creationwatches.com/products/" />
+
+
+
+
+<link rel="canonical" href="https://www.creationwatches.com/products/seiko-automatic-sports-89/seiko-automatic-snk795-snk795k1-snk795k-mens-watch-1709.html" />
+<link rel="alternate"  href="https://www.creationwatches.com/products/nl/seiko-automatic-sports-89/seiko-automatic-snk795-snk795k1-snk795k-mens-watch-1709.html"  hreflang="nl" />
+<link rel="alternate" href="https://www.creationwatches.com/products/fr/seiko-automatic-sports-89/seiko-automatic-snk795-snk795k1-snk795k-mens-watch-1709.html" hreflang="fr" />
+<link rel="alternate" href="https://www.creationwatches.com/products/de/seiko-automatic-sports-89/seiko-automatic-snk795-snk795k1-snk795k-mens-watch-1709.html" hreflang="de" />
+<link rel="alternate" href="https://www.creationwatches.com/products/es/seiko-automatic-sports-89/seiko-automatic-snk795-snk795k1-snk795k-mens-watch-1709.html" hreflang="es" />
+<link rel="alternate" href="https://www.creationwatches.com/products/it/seiko-automatic-sports-89/seiko-automatic-snk795-snk795k1-snk795k-mens-watch-1709.html" hreflang="it" />
+<link rel="alternate" href="https://www.creationwatches.com/products/el/seiko-automatic-sports-89/seiko-automatic-snk795-snk795k1-snk795k-mens-watch-1709.html" hreflang="el" />
+<link rel="alternate" href="https://www.creationwatches.com/products/pt/seiko-automatic-sports-89/seiko-automatic-snk795-snk795k1-snk795k-mens-watch-1709.html" hreflang="pt" />
+<link rel="alternate" href="https://www.creationwatches.com/products/da/seiko-automatic-sports-89/seiko-automatic-snk795-snk795k1-snk795k-mens-watch-1709.html" hreflang="da" />
+<link rel="alternate" href="https://www.creationwatches.com/products/sv/seiko-automatic-sports-89/seiko-automatic-snk795-snk795k1-snk795k-mens-watch-1709.html" hreflang="sv" />
+<link rel="alternate" href="https://www.creationwatches.com/products/no/seiko-automatic-sports-89/seiko-automatic-snk795-snk795k1-snk795k-mens-watch-1709.html" hreflang="no" />
+<link rel="alternate" href="https://www.creationwatches.com/products/fi/seiko-automatic-sports-89/seiko-automatic-snk795-snk795k1-snk795k-mens-watch-1709.html" hreflang="fi" />
+<link rel="alternate" href="https://www.creationwatches.com/products/ru/seiko-automatic-sports-89/seiko-automatic-snk795-snk795k1-snk795k-mens-watch-1709.html" hreflang="ru" />
+<link rel="alternate" href="https://www.creationwatches.com/products/ja/seiko-automatic-sports-89/seiko-automatic-snk795-snk795k1-snk795k-mens-watch-1709.html" hreflang="ja" />
+<link rel="alternate" href="https://www.creationwatches.com/products/ko/seiko-automatic-sports-89/seiko-automatic-snk795-snk795k1-snk795k-mens-watch-1709.html" hreflang="ko" />
+<link rel="alternate" href="https://www.creationwatches.com/products/vi/seiko-automatic-sports-89/seiko-automatic-snk795-snk795k1-snk795k-mens-watch-1709.html" hreflang="vi" />
+<link rel="alternate" href="https://www.creationwatches.com/products/th/seiko-automatic-sports-89/seiko-automatic-snk795-snk795k1-snk795k-mens-watch-1709.html" hreflang="th" />
+<link rel="alternate" href="https://www.creationwatches.com/products/pl/seiko-automatic-sports-89/seiko-automatic-snk795-snk795k1-snk795k-mens-watch-1709.html" hreflang="pl" />
+<link rel="alternate" href="https://www.creationwatches.com/products/zh-CHT/seiko-automatic-sports-89/seiko-automatic-snk795-snk795k1-snk795k-mens-watch-1709.html" hreflang="zh-Hant" />
+<link rel="alternate" href="https://www.creationwatches.com/products/zh-CHS/seiko-automatic-sports-89/seiko-automatic-snk795-snk795k1-snk795k-mens-watch-1709.html" hreflang="zh-Hans" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdn.creationwatches.com/products/includes/templates/creation/css/main_fourth.css" />
+<link rel="stylesheet" href="https://cdn.creationwatches.com/products/includes/templates/creation/css/rightslide_latest.css" media="none" onload="if(media!='all') media='all'" />
+
+
+<link rel="stylesheet" type="text/css" href="https://cdn.creationwatches.com/products/includes/templates/creation/css/dd-style-min.css"  />
+ <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.min.css" />
+
+
+
+
+<!---------- product banner -------------------->
+<link rel="stylesheet"  href="https://cdn.creationwatches.com/products/includes/templates/creation/css/lightslider-min.css" media="none" onload="if(media!='all') media='all'"/>
+    
+
+
+
+<link rel="stylesheet" type="text/css" href="https://cdn.creationwatches.com/products/includes/templates/creation/css/sweet-alert.css" />
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+
+<script  src="https://cdn.creationwatches.com/products/includes/templates/creation/jscript/jquery.dd1.min.js" type="text/javascript"></script>
+
+<!--<script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5d1b92e655a8b200110cdf6e&product='inline-share-buttons'" async='async'></script>-->
+<script>
+$(document).ready(function(){
+	
+  $(".menu-toggle").click(function(){
+    $('#menu').slideToggle("slow");
+  });
+});
+</script>
+
+	
+
+<script type="text/javascript">
+	     $(function() {
+	       $('#categories-table .accContent').hide().end()
+		   .find('.accToggler').click(function() {
+	         this.className = this.className == 'accToggler' ? 'accTogglerOpen' : 'accToggler';
+	         $(this).next().slideToggle();
+	       });
+
+		/*  $('.accToggler:first').removeClass("accToggler").addClass("accTogglerOpen");
+		   $('#first_accContent').show();*/
+	     });
+	</script>
+	
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-233895-1', 'auto');
+  ga('create', 'UA-233895-6', 'auto', 'cwnew');
+  ga('require', 'linkid');
+  ga('require', 'ec');
+  ga('set', 'currencyCode', 'USD'); 
+  //ga('require', 'GTM-T85VJ89');
+  
+ 
+</script>
+<!-- Global site tag (gtag.js) - Google Ads: 1067556706 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-1067556706"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-1067556706');
+</script>
+</head><body id="productinfo">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TMSN7ZM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div data-role="page" id="pageinit2"> </div>
+<div class="wrapper">
+
+  
+<div class="header">
+<div class="header-mid">
+<div class="main-wrapper">
+<div class="logo"><a href="https://www.creationwatches.com/"></a></div>
+<div id="o-wrapper" class="o-wrapper">
+
+      <div class="c-buttons">
+        <button id="c-button--slide-right" class="c-button"><span></span><span></span><span></span></button>
+      </div>
+      <div id="github-icons"></div>
+
+</div>
+
+<div class="rsmclr"></div>
+<div class="lan-social">
+
+
+<div class="cwnewc1" style="">
+<div class="social">
+<!--
+<div class="fb-like">
+<iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fcreationwatchespage&send=false&layout=button_count&width=90&show_faces=false&action=like&colorscheme=light&font&height=21" scrolling="no" frameborder="0" style="border:5; overflow:hidden; width:90px; height:21px;" allowTransparency="true"></iframe>
+</div>-->
+<div class="soci-link"><!--<a href="https://www.facebook.com/pages/CreationWatchescom/65810492519" target="_blank" class="facebook"></a>--><a href="https://www.twitter.com/creationwatches"  class="twitter"></a><a href="https://www.pinterest.com/creationwatch/" ><img src="/products/includes/templates/creation/cssimages/pinterest.png" style="vertical-align: unset;"></a></div>
+<div class="clr"></div>
+</div>
+<div class="lang"> 
+
+<form class="fl  cw-language" action="" method="post" enctype="multipart/form-data" name="frmdata">
+<select name="tech" class="tech c-lang" id="tech" style="margin-right:12px;" onchange="document.location.href=this.value; dataLayer.push({'event': 'change_language'});">
+<option  value="https://www.creationwatches.com/products/seiko-automatic-sports-89/seiko-automatic-snk795-snk795k1-snk795k-mens-watch-1709.html" data-image="https://cdn.creationwatches.com/products/includes/templates/creation/cssimages/blank.gif"  data-imagecss="flag en"  name="cd">English</option>
+<option value="https://www.creationwatches.com/products/nl/seiko-automatic-sports-89/seiko-automatic-snk795-snk795k1-snk795k-mens-watch-1709.html"    data-image="https://cdn.creationwatches.com/products/includes/templates/creation/cssimages/blank.gif" data-imagecss="flag nl" >Dutch (nl)</option>
+<option value="https://www.creationwatches.com/products/fr/seiko-automatic-sports-89/seiko-automatic-snk795-snk795k1-snk795k-mens-watch-1709.html"   data-image="https://cdn.creationwatches.com/products/includes/templates/creation/cssimages/blank.gif"  data-imagecss="flag fr" >French (fr)</option>
+<option value="https://www.creationwatches.com/products/de/seiko-automatic-sports-89/seiko-automatic-snk795-snk795k1-snk795k-mens-watch-1709.html"  data-image="https://cdn.creationwatches.com/products/includes/templates/creation/cssimages/blank.gif"  data-imagecss="flag de" >German (de)</option>
+<option value="https://www.creationwatches.com/products/es/seiko-automatic-sports-89/seiko-automatic-snk795-snk795k1-snk795k-mens-watch-1709.html"   data-image="https://cdn.creationwatches.com/products/includes/templates/creation/cssimages/blank.gif"  data-imagecss="flag es" >Spanish (es)</option>
+<option value="https://www.creationwatches.com/products/it/seiko-automatic-sports-89/seiko-automatic-snk795-snk795k1-snk795k-mens-watch-1709.html"  data-image="https://cdn.creationwatches.com/products/includes/templates/creation/cssimages/blank.gif"  data-imagecss="flag it" >Italian (it)</option>
+<option value="https://www.creationwatches.com/products/el/seiko-automatic-sports-89/seiko-automatic-snk795-snk795k1-snk795k-mens-watch-1709.html"  data-image="https://cdn.creationwatches.com/products/includes/templates/creation/cssimages/blank.gif"  data-imagecss="flag el" >Greek (el)</option>
+<option value="https://www.creationwatches.com/products/pt/seiko-automatic-sports-89/seiko-automatic-snk795-snk795k1-snk795k-mens-watch-1709.html"  data-image="https://cdn.creationwatches.com/products/includes/templates/creation/cssimages/blank.gif"  data-imagecss="flag pt" >Portuguese (pt)</option>
+<option value="https://www.creationwatches.com/products/da/seiko-automatic-sports-89/seiko-automatic-snk795-snk795k1-snk795k-mens-watch-1709.html"  data-image="https://cdn.creationwatches.com/products/includes/templates/creation/cssimages/blank.gif"  data-imagecss="flag da" >Danish (da)</option>
+<option value="https://www.creationwatches.com/products/sv/seiko-automatic-sports-89/seiko-automatic-snk795-snk795k1-snk795k-mens-watch-1709.html"  data-image="https://cdn.creationwatches.com/products/includes/templates/creation/cssimages/blank.gif"  data-imagecss="flag sv" >Swedish (sv)</option>
+<option value="https://www.creationwatches.com/products/no/seiko-automatic-sports-89/seiko-automatic-snk795-snk795k1-snk795k-mens-watch-1709.html"  data-image="https://cdn.creationwatches.com/products/includes/templates/creation/cssimages/blank.gif"  data-imagecss="flag no">Norwegian (no)</option>
+<option value="https://www.creationwatches.com/products/fi/seiko-automatic-sports-89/seiko-automatic-snk795-snk795k1-snk795k-mens-watch-1709.html"  data-image="https://cdn.creationwatches.com/products/includes/templates/creation/cssimages/blank.gif"  data-imagecss="flag fi">Finnish (fi)</option>
+<option value="https://www.creationwatches.com/products/ru/seiko-automatic-sports-89/seiko-automatic-snk795-snk795k1-snk795k-mens-watch-1709.html"  data-image="https://cdn.creationwatches.com/products/includes/templates/creation/cssimages/blank.gif"  data-imagecss="flag ru">Russian (ru)</option>
+<option value="https://www.creationwatches.com/products/ja/seiko-automatic-sports-89/seiko-automatic-snk795-snk795k1-snk795k-mens-watch-1709.html"  data-image="https://cdn.creationwatches.com/products/includes/templates/creation/cssimages/blank.gif" data-imagecss="flag ja">Japanese (ja)</option>
+<option value="https://www.creationwatches.com/products/ko/seiko-automatic-sports-89/seiko-automatic-snk795-snk795k1-snk795k-mens-watch-1709.html"  data-image="https://cdn.creationwatches.com/products/includes/templates/creation/cssimages/blank.gif" data-imagecss="flag ko">Korean (ko)</option>
+<option value="https://www.creationwatches.com/products/vi/seiko-automatic-sports-89/seiko-automatic-snk795-snk795k1-snk795k-mens-watch-1709.html"  data-image="https://cdn.creationwatches.com/products/includes/templates/creation/cssimages/blank.gif" data-imagecss="flag vi">Vietnamese (vi)</option>
+<option value="https://www.creationwatches.com/products/th/seiko-automatic-sports-89/seiko-automatic-snk795-snk795k1-snk795k-mens-watch-1709.html"  data-image="https://cdn.creationwatches.com/products/includes/templates/creation/cssimages/blank.gif" data-imagecss="flag th">Thai (th)</option>
+<option value="https://www.creationwatches.com/products/pl/seiko-automatic-sports-89/seiko-automatic-snk795-snk795k1-snk795k-mens-watch-1709.html"  data-image="https://cdn.creationwatches.com/products/includes/templates/creation/cssimages/blank.gif" data-imagecss="flag pl">Polish (pl)</option>
+<option value="https://www.creationwatches.com/products/zh-CHT/seiko-automatic-sports-89/seiko-automatic-snk795-snk795k1-snk795k-mens-watch-1709.html"  data-image="https://cdn.creationwatches.com/products/includes/templates/creation/cssimages/blank.gif" data-imagecss="flag zh-CHT">Chinese (zh-CHT)</option>
+<option value="https://www.creationwatches.com/products/zh-CHS/seiko-automatic-sports-89/seiko-automatic-snk795-snk795k1-snk795k-mens-watch-1709.html"  data-image="https://cdn.creationwatches.com/products/includes/templates/creation/cssimages/blank.gif" data-imagecss="flag zh-CHT">Chinese (zh-CHS)</option>
+</select>
+
+</form>
+
+
+<form class="fl cw-currency"  name="currencies" action="https://www.creationwatches.com/products/index.php?main_page=index" method="get">
+<select name="currency" class="tech c-lang" id="tech1" onchange="dataLayer.push({'event': 'change_currency'}); this.form.submit();">
+              <!--<option value="USD" selected="selected">US Dollar ($)</option>
+                <option value="EUR" >Euro (€)</option>
+                <option value="GBP" >UK Pound (£)</option>
+                <option value="AUD" >Australian Dollar (AUD)</option>
+                <option value="CAD" >Canadian Dollar (CAD)</option>
+                <option value="CHF" >Swiss Franc (CHF)</option>
+                <option value="NZD" >NZ Dollar (NZD)</option>
+                <option value="SEK" >Swedish Krona (SEK)</option>
+                <option value="DKK" >Danish Krone (DKK)</option>
+                <option value="NOK" >Norwegian Krone (NOK)</option>
+                <option value="SGD" >Singapore Dollar (SGD)</option>
+                <option value="JPY" >Japanese Yen (¥)</option>
+				<option value="BRL"   >Brazilian Real (R$)</option>
+				<option value="INR"   >Indian Rupees (Rs)</option>
+				<option value="KRW"   >Korean Won (₩)</option>
+				<option value="RUB"   >Russian Ruble (руб)</option>
+				<option value="HKD"   >Hong Kong Dollar (HK$)</option>-->
+											
+					<option value="AUD" >Australian Dollar (AU $)</option>
+												
+					<option value="BRL" >Brazilian Real (R$)</option>
+												
+					<option value="CAD" >Canadian Dollar (CA $)</option>
+												
+					<option value="DKK" >Danish Krone (kr.)</option>
+												
+					<option value="EUR" >Euro (&#8364;)</option>
+												
+					<option value="HKD" >Hong Kong Dollar</option>
+												
+					<option value="INR" >Indian Rupees (INR)</option>
+												
+					<option value="JPY" >Japanese Yen (&#165;)</option>
+												
+					<option value="KRW" >Korean Won (&#x20a9;)</option>
+												
+					<option value="NOK" >Norwegian Krone (kr.)</option>
+												
+					<option value="NZD" >NZ Dollar (NZ $)</option>
+												
+					<option value="RUB" >Russian Ruble (p.)</option>
+												
+					<option value="SGD" >Singapore Dollar (SG $)</option>
+												
+					<option value="SEK" >Swedish Krona (kr.)</option>
+												
+					<option value="CHF" >Swiss Franc (Fr.)</option>
+												
+					<option value="AED" >UAE Dirham (د.إ)</option>
+												
+					<option value="GBP" >UK Pound (&#163;)</option>
+												
+					<option value="USD" selected>US Dollar (US $)</option>
+												
+					<option value="VND" >Vietnamese Dong (đ)</option>
+					            </select>
+
+			<input type="hidden" name="main_page" value="product_info" /><input type="hidden" name="products_id" value="1709" /> </form>
+
+
+
+</div>
+
+<a class="track" href="https://www.creationwatches.com/products/index.php?main_page=orderstatus" title="Track Order"></a>
+
+
+<div class="clr"></div>
+</div>
+
+<script> 
+$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideToggle("slow");
+    });
+});
+</script>
+
+<div class="Scd-r"  style="" >
+
+
+
+
+<form name="quick_find" action="https://www.creationwatches.com/products/index.php?main_page=advanced_search_result" method="get" class="fl  cw-search cw-search1">
+<div class="search-box">
+<input type="hidden" name="main_page" value="advanced_search_result" />
+<input type="hidden" name="search_in_description" value="1" />
+<input name="keyword" id="keyword" class="serbox" type="text"  autocomplete="off"  placeholder="" />
+<button class="serbtn" type="submit"></button>
+<div class="clr"></div>
+</div>
+
+<div class="help-block" style="display:none">
+<p class="includetxt"><input type="checkbox" name="os" /> Include Sold-out watches</p><!-- <a href="https://www.creationwatches.com/products/index.php?main_page=advanced_search" class="" style="font-size:11px; color:#2c93cc;">Advanced Search</a> -->
+</div>
+
+</form>
+   <script>
+  $( function() {
+   
+ 
+    $( "#keyword" ).autocomplete({
+      source: "https://www.creationwatches.com/products/search_string.php",
+      minLength: 4
+      
+    });
+  } );
+  </script>
+<!--<div class="m-search"><span id="flip"></span>
+
+
+
+</div>-->
+<div class="mini-cart" id="mcart" >
+<a style="height:28px; width:28px; display:block; position:absolute; z-index:2501" href="https://www.creationwatches.com/products/shopping-cart/"></a>
+<span class="quantity" id="mini_cart_qty">0</span>
+
+<div  id="mcartcontent" class="mcart-content" style="display:none;">
+
+</div>
+
+
+
+</div>
+
+
+<div class="clr"></div>
+</div>
+
+<div id="panel" style="width:100%; display:none;">
+<form name="quick_find" action="https://www.creationwatches.com/products//index.php?main_page=advanced_search_result" method="get" class="fl cw-search cw-search2">
+<div class="search-box">
+<input type="hidden" name="main_page" value="advanced_search_result" />
+<input type="hidden" name="search_in_description" value="1" />
+<input name="keyword"  class="serbox" type="text"  placeholder="" />
+<button class="serbtn" type="submit"></button>
+<div class="clr"></div>
+</div>
+<div class="help-block">
+<!--<p class="includetxt"><input type="checkbox" name="os" /> Include Sold-out watches</p>--><a href="index.php?main_page=advanced_search" class="" style="font-size:11px; color:#2c93cc;"></a>
+</div>
+</form>
+</div>
+ 
+</div>
+<div class="clr"></div>
+</div>
+</div>
+<div class="main-wrapper" style="">
+<div class="menu">
+<a href="https://www.creationwatches.com/" class="hom-btn"></a>
+<span class="menu-toggle"><img src="https://cdn.creationwatches.com/products/new_images/menu-toggler.png" alt="Creationwatches Menu Toggler" /></span>
+<ul id="menu">
+<!--<li><a href="/products/">Shop For Watches</a></li> -->
+<li><a href="https://www.creationwatches.com/products/">Shop</a></li>
+	<li><a href="/aboutus.html">About Us</a></li>
+	<li><a href="https://www.creationwatches.com/faq.html">FAQ</a></li>	
+<li><a href="https://www.creationwatches.com/products/shipping.html">Shipping</a></li>
+<li> <a href="https://www.creationwatches.com/watchblog/">Blog</a></li>
+<li><a href="https://www.creationwatches.com/products/index.php?main_page=customer_testimonials">Testimonials</a></li>
+<li><a href="/contactus.html" >Contact Us</a></li>
+<li><a href="https://www.creationwatches.com/products/index.php?main_page=sale_offer" style="color:#ffc000;">Sale/Offers</a></li>
+</ul>
+<div class="clr"></div>
+</div>
+<div style="height:8px; width:100%"></div>
+<div class="sublis">
+        <ul>
+		          <li><a class="return" >30 Day Return Policy</a></li> 
+		  <li><a class="authenticity" >Authenticity Guaranteed</a></li>
+		          <li><a class="free-shipping">Free Shipping Worldwide</a></li>
+          <li><a class="cust-service" style="border:none;">Unbeatable Customer Service</a></li>
+		  <li><a class="cust-world" style="border:none;">500,000+ Customers Worldwide</a></li>
+          <div class="clr"></div>
+        </ul>
+      </div>
+<div class="clr"></div>
+</div>
+</div>
+
+  <div class="main bdr-bottom1">
+    <div class="main-wrapper">
+		 <div class="column bdr-bottom">
+			
+				<div class="lcol" >
+				<nav id="c-menu--slide-right" class="c-menu c-menu--slide-right" style=
+				"">
+					<button class="c-menu__close">&nbsp;<span style="float:right;">x</span><div class="clr"></div></button>
+					<div class="lcolin" id="leftcol">
+						 <script>
+  /*$( function() {
+    $( "#slider-range" ).slider({
+      range: true,
+      min: 0,
+      max: 5999,
+	        values: [ 0, 5999 ],
+	        slide: function( event, ui ) {
+        $( "#amount" ).val( "US $" + ui.values[ 0 ] + " - US $" + ui.values[ 1 ] );
+		create_url(-1, 'price', ui.values[ 0 ], ui.values[ 1 ]);
+      }
+    });
+    $( "#amount" ).val( "US $" + $( "#slider-range" ).slider( "values", 0 ) +
+      " - US $" + $( "#slider-range" ).slider( "values", 1 ) );
+  } ); */
+  </script>
+<script type="text/javascript">
+$(function() {
+$(".brand-check").change( function(){
+  var val = $(this).val();
+  var href = $('#'+val).attr('href');
+ // alert(val) ;
+  //alert('');
+  		document.location.href = href ;
+	});
+
+// handle Gender click
+$(".gender-check").change( function(){
+  var val = $(this).val();
+  
+	create_url(val, 'gender') ; 
+	
+});
+
+// handle Brand Type click
+$(".band-type-check").change( function(){
+	
+  var val = $(this).val(); 
+   
+	create_url(val, 'band-type') ; 
+	
+});
+
+// handle Water Resistance click
+$(".water-resistance-check").change( function(){
+	
+  var val = $(this).val(); 
+   
+	create_url(val, 'water-resistance') ; 
+	
+});
+
+// handle Style click
+$(".style-check").change( function(){
+	
+  var val = $(this).val(); 
+   
+	create_url(val, 'style') ; 
+	
+});
+
+});
+
+function create_url(value, type, pfrom, pto)
+{
+	var qs = '';
+	 
+	//alert('HI');
+	/////////////////////////  Process Brand URL ////////////////////
+	 
+	 var brand_array = new Array() ;
+			 if(type == 'brand')
+	 {
+		var index = brand_array.indexOf(value, 0);
+		
+		if(index > -1)
+		{
+			brand_array.splice(index, 1); 
+		}
+		else
+			brand_array.push(value) ;
+	} 
+	 
+	 var brand_url = $.param({ brand: brand_array });
+	 
+	 //////////////////  End Processing Brand   ////////////////////////////
+	 
+	 
+	 /////////////////////////  Process Gender URL ////////////////////
+	 
+	 var gender_array = new Array() ;
+	 
+	 	 
+	 if(type == 'gender')
+	 {
+		 value = value.replace('\\','');
+		var index = gender_array.indexOf(value, 0);
+		
+		if(index > -1)
+		{
+			gender_array.splice(index, 1); 
+		}
+		else
+			gender_array.push(value) ;
+	} 
+	 
+	 var gender_url = $.param({ gender: gender_array });
+		 
+	 //////////////////  End Processing Gender   ////////////////////////////
+	 
+	 
+	 /////////////////////////  Process Band type URL ////////////////////
+	 
+	 var band_type_array = new Array() ;
+	 
+	 	 
+	 if(type == 'band-type')
+	 {
+		var index = band_type_array.indexOf(value, 0);
+		
+		if(index > -1)
+		{
+			band_type_array.splice(index, 1); 
+		}
+		else
+			band_type_array.push(value) ;
+	} 
+	 
+	 var band_type_url = $.param({ 'band-type': band_type_array });
+	
+	 
+	 //////////////////  End Processing Band Type   ////////////////////////////
+	 
+	 /////////////////////////  Process Water Resistance URL ////////////////////
+	 
+	 var water_resistance_array = new Array() ;
+	 var water_resistance_url = '' ;
+	 
+	 	 
+	 if(type == 'water-resistance')
+	 {
+		var index = water_resistance_array.indexOf(value, 0);
+		
+		if(index > -1)
+		{
+			water_resistance_array.splice(index, 1); 
+		}
+		else
+			water_resistance_array.push(value) ;
+	} 
+	 
+	 water_resistance_url = $.param({ 'water-resistance': water_resistance_array });
+	
+	 
+	 //////////////////  End Processing Water Resistance   ////////////////////////////
+	 
+	 /////////////////////////  Process Style URL ////////////////////
+	 
+	 var style_array = new Array() ;
+	 var style_url = '' ;
+	 
+	 	 
+	 if(type == 'style')
+	 {
+		var index = style_array.indexOf(value, 0);
+		
+		if(index > -1)
+		{
+			style_array.splice(index, 1); 
+		}
+		else
+			style_array.push(value) ;
+	} 
+	 
+	 style_url = $.param({ 'style': style_array });
+	
+	 
+	 //////////////////  End Style Resistance   ////////////////////////////
+	 
+	 
+	 
+	 var price_url = '' ;
+	 if(type == 'price')
+	 {
+		 if(parseInt( $("#pfrom").val()) > parseInt($("#pto").val())){
+			alert('Price range is wrong'); return NULL ;  			 
+		 }
+		price_url = 'pfrom='+ pfrom + '&pto=' + pto ;
+	 } 	 /////////////////////////  Process Price URL ////////////////////
+	 
+	 
+	  //////////////////  End Processing Price   ////////////////////////////
+	 
+	 if(brand_url !== '')
+		 qs += '&' +brand_url;
+	 if(gender_url !== '')
+		qs += '&' + gender_url ;
+	if(band_type_url !== '')
+		qs += '&' + band_type_url ; 
+	if(water_resistance_url !== '')
+		qs += '&' + water_resistance_url ; 
+	 if(price_url !== '')
+		qs += '&' + price_url ;
+	if(style_url !== '')
+		qs += '&' + style_url ;
+	 
+	// alert(price_url); 
+	 //return ;
+	 
+	 if(brand_array.length == 1 && gender_array.length == 0 && band_type_array.length == 0  && water_resistance_array.length == 0  && style_array == 0 && type != 'price' && price_url == '')
+	 {
+		 last_brand_id = brand_array[0] ; 
+		 var href = $('#'+last_brand_id).attr('href');
+		 document.location.href = href ;
+	 }
+	 else {
+				document.location.href = '/products/index.php?main_page=product_listing'+ qs;
+			 }
+}
+
+function open_hide(id)
+{
+	$('#expand-box'+id).toggle();
+	
+	var a = $('#heading'+id).find("span").attr('class');
+	
+	if(a == 'open')
+	{
+		$('#heading'+id).find("span").removeClass( 'open' );
+		$('#heading'+id).find("span").addClass( 'close' );
+	}
+	else
+	{
+		$('#heading'+id).find("span").removeClass( 'close' );
+		$('#heading'+id).find("span").addClass( 'open' );
+	}
+	
+	/*if(id == 2){
+		if(a == 'open'){
+			$('#view-all-brand-link').hide();
+			$("#expand-box2").css({"height": "400px", "overflow": "auto"});
+			$("#brand-side-box").css("padding-bottom", "0px");
+		}
+		else {
+			$('#view-all-brand-link').show();
+			$("#brand-side-box").css("padding-bottom", "20px");
+		}
+	}*/
+}
+
+function show_all_brand(){
+	$("#expand-box2").show() ;
+	$("#expand-box2").css({"height": "auto", "overflow": "unset"});
+	$("#view-all-brand-link").hide();
+	$("#brand-side-box").css("padding-bottom", "0px");
+	$('#heading2').find("span").removeClass( 'close' );
+	$('#heading2').find("span").addClass( 'open' );
+}
+
+</script>
+
+
+			<div class="side-box"><div class="heading1" id="heading1" onclick="javascript:open_hide(1)"><span class="open"></span> Popular Selections </div><div class="expand-box" id="expand-box1" style="" ><ul class="sidelist"><li class="b-sellers"><a href="https://www.creationwatches.com/products/index.php?main_page=products_bestseller_week">Best Sellers</a></li><li class="n-arrivals"><a href="https://www.creationwatches.com/products/new-products/" >New Arrivals</a></li><li class="o-blog"><a href="http://www.creationwatches.com/watchblog/" target="_blank" >Visit Our Blog</a></li><li class="w-reviews"><a href="http://www.creationwatches.com/watchblog/category/reviews" target="_blank" >Watch Reviews</a></li><li><a class="category-top" href="https://www.creationwatches.com/products/watches-of-the-week-213/">Watches Of The Week</a></li><li><a id="211" class="category-top" href="https://www.creationwatches.com/products/blowout-sale-211/">Blowout Sale</a></li><li><a id="297" class="category-top" href="https://www.creationwatches.com/products/clearance-sale-297/">Clearance Sale</a></li><li><a class="category-top" href="https://www.creationwatches.com/products/featured-products/">Recommended Watches</a></li><li><a id="260"  class="category-top" href="https://www.creationwatches.com/products/back-in-stock-260/">Back in Stock!</a></li><li><a class="category-top" href="/Most-Popular-Watches/">Popular Watches</a></li><li><a class="category-top" href="https://www.creationwatches.com/products/all-products/">All Watches</a></li></ul></div></div><div class="side-box" style="" id="brand-side-box">
+<div class="heading1" id="heading2" onclick="javascript:open_hide('2')"><span class="open"></span><b>SHOP BY BRAND</b></div>
+<div id="expand-box2" class="expand-box " style="">
+<ul class="sidelist"><li class="sidelist-li-for-mob"><div style="float:left"><input class="brand-check" value="127"  type="checkbox"  /></div><div style="margin-top:-1px"><a id="127" href="https://www.creationwatches.com/products/seiko-watches-127/" >&nbsp;</a><a class="category-top" href="https://www.creationwatches.com/products/seiko-watches-127/"><span class="category-subs-parent">Seiko Watches</span></a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="brand-check" value="252"  type="checkbox"  /></div><div style="margin-top:-1px"><a id="252" href="https://www.creationwatches.com/products/orient-watches-252/" >&nbsp;</a><a class="category-top" href="https://www.creationwatches.com/products/orient-watches-252/"><span class="category-subs-parent">Orient Watches</span></a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="brand-check" value="155"  type="checkbox"  /></div><div style="margin-top:-1px"><a id="155" href="https://www.creationwatches.com/products/casio-watches-155/" >&nbsp;</a><a class="category-top" href="https://www.creationwatches.com/products/casio-watches-155/"><span class="category-subs-parent">Casio Watches</span></a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="brand-check" value="140"  type="checkbox"  /></div><div style="margin-top:-1px"><a id="140" href="https://www.creationwatches.com/products/citizen-watches-140/" >&nbsp;</a><a class="category-top" href="https://www.creationwatches.com/products/citizen-watches-140/"><span class="category-subs-parent">Citizen Watches</span></a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="brand-check" value="307"  type="checkbox"  /></div><div style="margin-top:-1px"><a id="307" href="https://www.creationwatches.com/products/invicta-watches-307/" >&nbsp;</a><a class="category-top" href="https://www.creationwatches.com/products/invicta-watches-307/"><span class="category-subs-parent">Invicta Watches</span></a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="brand-check" value="305"  type="checkbox"  /></div><div style="margin-top:-1px"><a id="305" href="https://www.creationwatches.com/products/fossil-watches-305/" >&nbsp;</a><a class="category-top" href="https://www.creationwatches.com/products/fossil-watches-305/"><span class="category-subs-parent">Fossil Watches</span></a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="brand-check" value="298"  type="checkbox"  /></div><div style="margin-top:-1px"><a id="298" href="https://www.creationwatches.com/products/michael-kors-watches-298/" >&nbsp;</a><a class="category-top" href="https://www.creationwatches.com/products/michael-kors-watches-298/"><span class="category-subs-parent">Michael Kors Watches</span></a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="brand-check" value="209"  type="checkbox"  /></div><div style="margin-top:-1px"><a id="209" href="https://www.creationwatches.com/products/tissot-watches-209/" >&nbsp;</a><a class="category-top" href="https://www.creationwatches.com/products/tissot-watches-209/"><span class="category-subs-parent">Tissot Watches</span></a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="brand-check" value="250"  type="checkbox"  /></div><div style="margin-top:-1px"><a id="250" href="https://www.creationwatches.com/products/hamilton-watches-250/" >&nbsp;</a><a class="category-top" href="https://www.creationwatches.com/products/hamilton-watches-250/"><span class="category-subs-parent">Hamilton Watches</span></a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="brand-check" value="361"  type="checkbox"  /></div><div style="margin-top:-1px"><a id="361" href="https://www.creationwatches.com/products/skagen-watches-361/" >&nbsp;</a><a class="category-top" href="https://www.creationwatches.com/products/skagen-watches-361/"><span class="category-subs-parent">Skagen Watches</span></a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="brand-check" value="365"  type="checkbox"  /></div><div style="margin-top:-1px"><a id="365" href="https://www.creationwatches.com/products/swatch-watches-365/" >&nbsp;</a><a class="category-top" href="https://www.creationwatches.com/products/swatch-watches-365/"><span class="category-subs-parent">Swatch Watches</span></a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="brand-check" value="348"  type="checkbox"  /></div><div style="margin-top:-1px"><a id="348" href="https://www.creationwatches.com/products/diesel-watches-348/" >&nbsp;</a><a class="category-top" href="https://www.creationwatches.com/products/diesel-watches-348/"><span class="category-subs-parent">Diesel Watches</span></a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="brand-check" value="359"  type="checkbox"  /></div><div style="margin-top:-1px"><a id="359" href="https://www.creationwatches.com/products/armani-exchange-watches-359/" >&nbsp;</a><a class="category-top" href="https://www.creationwatches.com/products/armani-exchange-watches-359/"><span class="category-subs-parent">Armani Exchange Watches</span></a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="brand-check" value="367"  type="checkbox"  /></div><div style="margin-top:-1px"><a id="367" href="https://www.creationwatches.com/products/nixon-watches-367/" >&nbsp;</a><a class="category-top" href="https://www.creationwatches.com/products/nixon-watches-367/"><span class="category-subs-parent">Nixon Watches</span></a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="brand-check" value="306"  type="checkbox"  /></div><div style="margin-top:-1px"><a id="306" href="https://www.creationwatches.com/products/luminox-watches-306/" >&nbsp;</a><a class="category-top" href="https://www.creationwatches.com/products/luminox-watches-306/"><span class="category-subs-parent">Luminox watches</span></a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="brand-check" value="424"  type="checkbox"  /></div><div style="margin-top:-1px"><a id="424" href="https://www.creationwatches.com/products/anne-klein-watches-424/" >&nbsp;</a><a class="category-top" href="https://www.creationwatches.com/products/anne-klein-watches-424/"><span class="category-subs-parent">Anne Klein Watches</span></a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="brand-check" value="362"  type="checkbox"  /></div><div style="margin-top:-1px"><a id="362" href="https://www.creationwatches.com/products/tag-heuer-watches-362/" >&nbsp;</a><a class="category-top" href="https://www.creationwatches.com/products/tag-heuer-watches-362/"><span class="category-subs-parent">Tag Heuer Watches</span></a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="brand-check" value="200"  type="checkbox"  /></div><div style="margin-top:-1px"><a id="200" href="https://www.creationwatches.com/products/emporio-armani-watches-200/" >&nbsp;</a><a class="category-top" href="https://www.creationwatches.com/products/emporio-armani-watches-200/"><span class="category-subs-parent">Emporio Armani Watches</span></a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="brand-check" value="442"  type="checkbox"  /></div><div style="margin-top:-1px"><a id="442" href="https://www.creationwatches.com/products/aries-gold-watches-442/" >&nbsp;</a><a class="category-top" href="https://www.creationwatches.com/products/aries-gold-watches-442/"><span class="category-subs-parent">Aries Gold Watches</span></a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="brand-check" value="433"  type="checkbox"  /></div><div style="margin-top:-1px"><a id="433" href="https://www.creationwatches.com/products/cluse-watches-433/" >&nbsp;</a><a class="category-top" href="https://www.creationwatches.com/products/cluse-watches-433/"><span class="category-subs-parent">Cluse Watches</span></a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="brand-check" value="435"  type="checkbox"  /></div><div style="margin-top:-1px"><a id="435" href="https://www.creationwatches.com/products/ice-watches-435/" >&nbsp;</a><a class="category-top" href="https://www.creationwatches.com/products/ice-watches-435/"><span class="category-subs-parent">Ice Watches</span></a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="brand-check" value="360"  type="checkbox"  /></div><div style="margin-top:-1px"><a id="360" href="https://www.creationwatches.com/products/marc-by-marc-jacobs-watches-360/" >&nbsp;</a><a class="category-top" href="https://www.creationwatches.com/products/marc-by-marc-jacobs-watches-360/"><span class="category-subs-parent">Marc by Marc Jacobs Watches</span></a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="brand-check" value="431"  type="checkbox"  /></div><div style="margin-top:-1px"><a id="431" href="https://www.creationwatches.com/products/ratio-watches-431/" >&nbsp;</a><a class="category-top" href="https://www.creationwatches.com/products/ratio-watches-431/"><span class="category-subs-parent">Ratio Watches</span></a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="brand-check" value="434"  type="checkbox"  /></div><div style="margin-top:-1px"><a id="434" href="https://www.creationwatches.com/products/timex-watches-434/" >&nbsp;</a><a class="category-top" href="https://www.creationwatches.com/products/timex-watches-434/"><span class="category-subs-parent">Timex Watches</span></a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="brand-check" value="432"  type="checkbox"  /></div><div style="margin-top:-1px"><a id="432" href="https://www.creationwatches.com/products/victorinox-watches-432/" >&nbsp;</a><a class="category-top" href="https://www.creationwatches.com/products/victorinox-watches-432/"><span class="category-subs-parent">Victorinox Watches</span></a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="brand-check" value="441"  type="checkbox"  /></div><div style="margin-top:-1px"><a id="441" href="https://www.creationwatches.com/products/zeppelin-watches-441/" >&nbsp;</a><a class="category-top" href="https://www.creationwatches.com/products/zeppelin-watches-441/"><span class="category-subs-parent">Zeppelin Watches</span></a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="brand-check" value="271"  type="checkbox"  /></div><div style="margin-top:-1px"><a id="271" href="https://www.creationwatches.com/products/bulova-watches-271/" >&nbsp;</a><a class="category-top" href="https://www.creationwatches.com/products/bulova-watches-271/"><span class="category-subs-parent">Bulova Watches</span></a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="brand-check" value="465"  type="checkbox"  /></div><div style="margin-top:-1px"><a id="465" href="https://www.creationwatches.com/products/coach-watches-465/" >&nbsp;</a><a class="category-top" href="https://www.creationwatches.com/products/coach-watches-465/"><span class="category-subs-parent">Coach Watches</span></a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="brand-check" value="440"  type="checkbox"  /></div><div style="margin-top:-1px"><a id="440" href="https://www.creationwatches.com/products/maserati-watches-440/" >&nbsp;</a><a class="category-top" href="https://www.creationwatches.com/products/maserati-watches-440/"><span class="category-subs-parent">Maserati Watches</span></a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="brand-check" value="489"  type="checkbox"  /></div><div style="margin-top:-1px"><a id="489" href="https://www.creationwatches.com/products/morellato-accessories-489/" >&nbsp;</a><a class="category-top" href="https://www.creationwatches.com/products/morellato-accessories-489/"><span class="category-subs-parent">Morellato Accessories</span></a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="brand-check" value="443"  type="checkbox"  /></div><div style="margin-top:-1px"><a id="443" href="https://www.creationwatches.com/products/morellato-watches-443/" >&nbsp;</a><a class="category-top" href="https://www.creationwatches.com/products/morellato-watches-443/"><span class="category-subs-parent">Morellato Watches</span></a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="brand-check" value="423"  type="checkbox"  /></div><div style="margin-top:-1px"><a id="423" href="https://www.creationwatches.com/products/raymond-weil-watches-423/" >&nbsp;</a><a class="category-top" href="https://www.creationwatches.com/products/raymond-weil-watches-423/"><span class="category-subs-parent">Raymond Weil Watches</span></a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="brand-check" value="444"  type="checkbox"  /></div><div style="margin-top:-1px"><a id="444" href="https://www.creationwatches.com/products/trussardi-watches-444/" >&nbsp;</a><a class="category-top" href="https://www.creationwatches.com/products/trussardi-watches-444/"><span class="category-subs-parent">Trussardi Watches</span></a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="brand-check" value="466"  type="checkbox"  /></div><div style="margin-top:-1px"><a id="466" href="https://www.creationwatches.com/products/oris-watches-466/" >&nbsp;</a><a class="category-top" href="https://www.creationwatches.com/products/oris-watches-466/"><span class="category-subs-parent">Oris Watches</span></a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="brand-check" value="368"  type="checkbox"  /></div><div style="margin-top:-1px"><a id="368" href="https://www.creationwatches.com/products/kate-spade-watches-368/" >&nbsp;</a><a class="category-top" href="https://www.creationwatches.com/products/kate-spade-watches-368/"><span class="category-subs-parent">Kate Spade Watches</span></a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="brand-check" value="294"  type="checkbox"  /></div><div style="margin-top:-1px"><a id="294" href="https://www.creationwatches.com/products/accessories-294/" >&nbsp;</a><a class="category-top" href="https://www.creationwatches.com/products/accessories-294/"><span class="category-subs-parent">Accessories</span></a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="brand-check" value="321"  type="checkbox"  /></div><div style="margin-top:-1px"><a id="321" href="https://www.creationwatches.com/products/refurbished-watches-321/" >&nbsp;</a><a class="category-top" href="https://www.creationwatches.com/products/refurbished-watches-321/"><span class="category-subs-parent">Refurbished Watches</span></a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="brand-check" value="481"  type="checkbox"  /></div><div style="margin-top:-1px"><a id="481" href="https://www.creationwatches.com/products/armitron-watches-481/" >&nbsp;</a><a class="category-top" href="https://www.creationwatches.com/products/armitron-watches-481/"><span class="category-subs-parent">Armitron Watches</span></a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="brand-check" value="451"  type="checkbox"  /></div><div style="margin-top:-1px"><a id="451" href="https://www.creationwatches.com/products/edox-watches-451/" >&nbsp;</a><a class="category-top" href="https://www.creationwatches.com/products/edox-watches-451/"><span class="category-subs-parent">Edox Watches</span></a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="brand-check" value="475"  type="checkbox"  /></div><div style="margin-top:-1px"><a id="475" href="https://www.creationwatches.com/products/apm-monaco-475/" >&nbsp;</a><a class="category-top" href="https://www.creationwatches.com/products/apm-monaco-475/"><span class="category-subs-parent">Apm Monaco</span></a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="brand-check" value="473"  type="checkbox"  /></div><div style="margin-top:-1px"><a id="473" href="https://www.creationwatches.com/products/lamy-473/" >&nbsp;</a><a class="category-top" href="https://www.creationwatches.com/products/lamy-473/"><span class="category-subs-parent">Lamy</span></a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="brand-check" value="476"  type="checkbox"  /></div><div style="margin-top:-1px"><a id="476" href="https://www.creationwatches.com/products/pandora-476/" >&nbsp;</a><a class="category-top" href="https://www.creationwatches.com/products/pandora-476/"><span class="category-subs-parent">Pandora</span></a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="brand-check" value="477"  type="checkbox"  /></div><div style="margin-top:-1px"><a id="477" href="https://www.creationwatches.com/products/swarovski-477/" >&nbsp;</a><a class="category-top" href="https://www.creationwatches.com/products/swarovski-477/"><span class="category-subs-parent">Swarovski</span></a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="brand-check" value="479"  type="checkbox"  /></div><div style="margin-top:-1px"><a id="479" href="https://www.creationwatches.com/products/montblanc-479/" >&nbsp;</a><a class="category-top" href="https://www.creationwatches.com/products/montblanc-479/"><span class="category-subs-parent">Montblanc</span></a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="brand-check" value="480"  type="checkbox"  /></div><div style="margin-top:-1px"><a id="480" href="https://www.creationwatches.com/products/fossil-bags-480/" >&nbsp;</a><a class="category-top" href="https://www.creationwatches.com/products/fossil-bags-480/"><span class="category-subs-parent">Fossil Bags</span></a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="brand-check" value="487"  type="checkbox"  /></div><div style="margin-top:-1px"><a id="487" href="https://www.creationwatches.com/products/gaga-milano-watches-487/" >&nbsp;</a><a class="category-top" href="https://www.creationwatches.com/products/gaga-milano-watches-487/"><span class="category-subs-parent">GaGa Milano Watches</span></a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="brand-check" value="488"  type="checkbox"  /></div><div style="margin-top:-1px"><a id="488" href="https://www.creationwatches.com/products/klasse14-watches-488/" >&nbsp;</a><a class="category-top" href="https://www.creationwatches.com/products/klasse14-watches-488/"><span class="category-subs-parent">Klasse14 Watches</span></a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="brand-check" value="492"  type="checkbox"  /></div><div style="margin-top:-1px"><a id="492" href="https://www.creationwatches.com/products/sevenfriday-watches-492/" >&nbsp;</a><a class="category-top" href="https://www.creationwatches.com/products/sevenfriday-watches-492/"><span class="category-subs-parent">Sevenfriday Watches</span></a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="brand-check" value="506"  type="checkbox"  /></div><div style="margin-top:-1px"><a id="506" href="https://www.creationwatches.com/products/garmin-watches-506/" >&nbsp;</a><a class="category-top" href="https://www.creationwatches.com/products/garmin-watches-506/"><span class="category-subs-parent">Garmin Watches</span></a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="brand-check" value="512"  type="checkbox"  /></div><div style="margin-top:-1px"><a id="512" href="https://www.creationwatches.com/products/vostok-europe-watches-512/" >&nbsp;</a><a class="category-top" href="https://www.creationwatches.com/products/vostok-europe-watches-512/"><span class="category-subs-parent">Vostok Europe Watches</span></a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="brand-check" value="495"  type="checkbox"  /></div><div style="margin-top:-1px"><a id="495" href="https://www.creationwatches.com/products/watch-straps-495/" >&nbsp;</a><a class="category-top" href="https://www.creationwatches.com/products/watch-straps-495/"><span class="category-subs-parent">Watch Straps</span></a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="brand-check" value="513"  type="checkbox"  /></div><div style="margin-top:-1px"><a id="513" href="https://www.creationwatches.com/products/sunglasses-513/" >&nbsp;</a><a class="category-top" href="https://www.creationwatches.com/products/sunglasses-513/"><span class="category-subs-parent">Sunglasses</span></a></div></li></ul></div><!--<div id="view-all-brand-link" style="float: right;margin: 9px 6px 0px auto;font-size: 12px;font-weight: bold;"><a href="javascript:void(-1)"  style="" onclick="javascript:show_all_brand()">View All</a></div>--></div><div class="side-box">
+<div class="heading1" id="heading3" onclick="javascript:open_hide('3')"><span class="close"></span><b>SHOP BY Gender</b></div>
+<div id="expand-box3" class="expand-box heightbox2"  style="display: none;">
+<ul class="sidelist"><li class="sidelist-li-for-mob"><div style="float:left"><input class="gender-check" value="Men\'s"  type="checkbox"  /></div><div style="margin-top:-1px">&nbsp;<a class="category-top" href="javascript:void(-1)" onclick="javascript:create_url('Men\'s', 'gender') ;">Men's </a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="gender-check" value="Women\'s"  type="checkbox"  /></div><div style="margin-top:-1px">&nbsp;<a class="category-top" href="javascript:void(-1)" onclick="javascript:create_url('Women\'s', 'gender') ;">Women's </a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="gender-check" value="Unisex"  type="checkbox"  /></div><div style="margin-top:-1px">&nbsp;<a class="category-top" href="javascript:void(-1)" onclick="javascript:create_url('Unisex', 'gender') ;">Unisex </a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="gender-check" value="Kids"  type="checkbox"  /></div><div style="margin-top:-1px">&nbsp;<a class="category-top" href="javascript:void(-1)" onclick="javascript:create_url('Kids', 'gender') ;">Kids </a></div></li></ul></div></div><div class="side-box">
+<div class="heading1" id="heading4" onclick="javascript:open_hide('4')"><span class="close"></span><b>SHOP BY Band Type</b></div>
+<div id="expand-box4" class="expand-box "  style="display: none;">
+<ul class="sidelist"><li class="sidelist-li-for-mob"><div style="float:left"><input class="band-type-check" value="Bracelet"  type="checkbox"  /></div><div style="margin-top:-1px">&nbsp;<a class="category-top" href="javascript:void(-1)" onclick="javascript:create_url('Bracelet', 'band-type') ;">Bracelet</a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="band-type-check" value="Strap"  type="checkbox"  /></div><div style="margin-top:-1px">&nbsp;<a class="category-top" href="javascript:void(-1)" onclick="javascript:create_url('Strap', 'band-type') ;">Strap</a></div></li></ul></div></div><div class="side-box">
+<div class="heading1" id="heading5" onclick="javascript:open_hide('5')"><span class="close"></span><b>Water Resistance</b></div>
+<div id="expand-box5" class="expand-box heightbox2"  style="display: none;">
+<ul class="sidelist"><li class="sidelist-li-for-mob"><div style="float:left"><input class="water-resistance-check" value="1000M"  type="checkbox"  /></div><div style="margin-top:-1px">&nbsp;<a class="category-top" href="javascript:void(-1)" onclick="javascript:create_url('1000M', 'water-resistance') ;">1000M</a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="water-resistance-check" value="100M"  type="checkbox"  /></div><div style="margin-top:-1px">&nbsp;<a class="category-top" href="javascript:void(-1)" onclick="javascript:create_url('100M', 'water-resistance') ;">100M</a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="water-resistance-check" value="200M"  type="checkbox"  /></div><div style="margin-top:-1px">&nbsp;<a class="category-top" href="javascript:void(-1)" onclick="javascript:create_url('200M', 'water-resistance') ;">200M</a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="water-resistance-check" value="300M"  type="checkbox"  /></div><div style="margin-top:-1px">&nbsp;<a class="category-top" href="javascript:void(-1)" onclick="javascript:create_url('300M', 'water-resistance') ;">300M</a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="water-resistance-check" value="30M"  type="checkbox"  /></div><div style="margin-top:-1px">&nbsp;<a class="category-top" href="javascript:void(-1)" onclick="javascript:create_url('30M', 'water-resistance') ;">30M</a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="water-resistance-check" value="500M"  type="checkbox"  /></div><div style="margin-top:-1px">&nbsp;<a class="category-top" href="javascript:void(-1)" onclick="javascript:create_url('500M', 'water-resistance') ;">500M</a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="water-resistance-check" value="50M"  type="checkbox"  /></div><div style="margin-top:-1px">&nbsp;<a class="category-top" href="javascript:void(-1)" onclick="javascript:create_url('50M', 'water-resistance') ;">50M</a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="water-resistance-check" value="600M"  type="checkbox"  /></div><div style="margin-top:-1px">&nbsp;<a class="category-top" href="javascript:void(-1)" onclick="javascript:create_url('600M', 'water-resistance') ;">600M</a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="water-resistance-check" value="Splash Resistance"  type="checkbox"  /></div><div style="margin-top:-1px">&nbsp;<a class="category-top" href="javascript:void(-1)" onclick="javascript:create_url('Splash Resistance', 'water-resistance') ;">Splash Resistance</a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="water-resistance-check" value="Water Resistance"  type="checkbox"  /></div><div style="margin-top:-1px">&nbsp;<a class="category-top" href="javascript:void(-1)" onclick="javascript:create_url('Water Resistance', 'water-resistance') ;">Water Resistance</a></div></li></ul></div></div><div class="side-box">
+<div class="heading1" id="heading6" onclick="javascript:open_hide('6')"><span class="close"></span><b>Style</b></div>
+<div id="expand-box6" class="expand-box heightbox2"  style="display: none;">
+<ul class="sidelist"><li class="sidelist-li-for-mob"><div style="float:left"><input class="style-check" value="Dress"  type="checkbox"  /></div><div style="margin-top:-1px">&nbsp;<a class="category-top" href="javascript:void(-1)" onclick="javascript:create_url('Dress', 'style') ;">Dress</a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="style-check" value="Casual"  type="checkbox"  /></div><div style="margin-top:-1px">&nbsp;<a class="category-top" href="javascript:void(-1)" onclick="javascript:create_url('Casual', 'style') ;">Casual</a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="style-check" value="Diver\'s"  type="checkbox"  /></div><div style="margin-top:-1px">&nbsp;<a class="category-top" href="javascript:void(-1)" onclick="javascript:create_url('Diver\'s', 'style') ;">Diver's</a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="style-check" value="Sports"  type="checkbox"  /></div><div style="margin-top:-1px">&nbsp;<a class="category-top" href="javascript:void(-1)" onclick="javascript:create_url('Sports', 'style') ;">Sports</a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="style-check" value="Chronograph"  type="checkbox"  /></div><div style="margin-top:-1px">&nbsp;<a class="category-top" href="javascript:void(-1)" onclick="javascript:create_url('Chronograph', 'style') ;">Chronograph</a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="style-check" value="Fashion"  type="checkbox"  /></div><div style="margin-top:-1px">&nbsp;<a class="category-top" href="javascript:void(-1)" onclick="javascript:create_url('Fashion', 'style') ;">Fashion</a></div></li><li class="sidelist-li-for-mob"><div style="float:left"><input class="style-check" value="Pocket Watch"  type="checkbox"  /></div><div style="margin-top:-1px">&nbsp;<a class="category-top" href="javascript:void(-1)" onclick="javascript:create_url('Pocket Watch', 'style') ;">Pocket Watch</a></div></li></ul></div></div><div class="side-box" >
+<div class="heading1" id="heading60" onclick="javascript:open_hide('60')"><span class="close"></span><b>SHOP BY PRICE</b></div>
+<div id="expand-box60" class="expand-box"  style="display: none;" >
+<div style="padding-top: 20px; text-align: left;"><span style="font-size:12px">US $</span></div>
+<div style="padding-top: 10px;">&nbsp;<input type="text" name="pfrom" id="pfrom" value="" class="inpu2" size="5" style="width: 25%; height:20px;" placeholder=From>&nbsp;-&nbsp;<input type="text" name="pto" id="pto" value="" class="inpu2" size="5" style="width: 25%; height:20px;" placeholder=To>&nbsp;&nbsp;<button class="standard-buy-btn" type="button" onclick="javascript:create_url(-1, 'price',document.getElementById('pfrom').value,document.getElementById('pto').value )">Go</button></div></div></div>		<!--	<div class="side-box" id="leftgrate"> <a class="" href="https://www.reviews.io/company-reviews/store/rspl"><img src="https://cdn.creationwatches.com/products/includes/templates/creation/cssimages/reviews-io.jpg" /></a> </div>
+            <div class="side-box" id="leftresellerrate">
+<a href="https://www.resellerratings.com/store/Creation_Watches" onclick="window.open('https://www.resellerratings.com/store/Creation_Watches','name','height=760,width=780,scrollbars=1'); 
+        return false;"><img src="https://cdn.creationwatches.com/products/new_images/ad-banner/customer-love-us.jpg" width="184" height="70" oncontextmenu="alert('Copying Prohibited by Law - ResellerRatings seal is a Trademark of All Enthusiast, Inc.'); return false;" /></a>
+</div> -->
+            
+
+
+						 <div class="side-box info-left-col">
+						<div class="heading1" id="heading100" onclick="javascript:open_hide('100')"><span class="close"></span><b>Information</b></div>
+						<div id="expand-box100" class="expand-box"  style="display:none">
+						<ul class="sidelist">
+						<li><a class="category-top" href="https://www.creationwatches.com/products/">Shop</a></li>
+						<li><a class="category-top" href="https://www.creationwatches.com/products/index.php?main_page=infopages&pages_id=34" >About Us</a></li>
+												<li><a class="category-top" href="https://www.creationwatches.com/faq.html" >FAQ</a></li>	
+												<li><a class="category-top" href="https://www.creationwatches.com/products/shipping.html">Shipping</a></li>
+						<li><a class="category-top" href="http://www.creationwatches.com/watchblog/">Blog</a></li>
+						<li><a class="category-top" href="https://www.creationwatches.com/products/index.php?main_page=customer_testimonials">Testimonials</a></li>
+						<li><a class="category-top" href="https://www.creationwatches.com/products/index.php?main_page=infopages&pages_id=36" >Contact Us</a></li>
+						<li><a class="category-top" href="https://www.creationwatches.com/products/index.php?main_page=sale_offer" >Sale/Offers</a></li>
+						</ul></div>
+						</div> 
+												<div id="leftfeatured"></div>
+				
+					</div>
+				</nav><!-- /c-menu slide-right -->
+				</div>
+						
+			
+						<div class="rcol">
+				<div class="rcolin" id="rghtcol">
+								<div id="leftspecials"></div>
+				<div id="leftbestseller"></div>
+								<div class="side-box"><a  ><img src="https://www.creationwatches.com/products/includes/templates/creation/cssimages/ad-banner/en_free_shipping_worldwide.png" /></a></div>
+								<div id="leftcusttest"></div>
+								<div class="side-box"><div style="margin-bottom:5px;" > <a style="padding-bottom:5px;" href="https://www.creationwatches.com/products/gift-ideas-for-men-195/"><img src="https://cdn.creationwatches.com/products/includes/templates/creation/cssimages/gift-ideas/gift-ideas-men-en.jpg" alt="Gift Ideas for Men" /></a></div><div><a  href="https://www.creationwatches.com/products/gift-ideas-for-women-196/"><img src="https://cdn.creationwatches.com/products/includes/templates/creation/cssimages/gift-ideas/gift-ideas-women-en.jpg" alt="Gift Ideas for Women" /></a></div></div>
+								
+												</div>
+			</div>
+						<div class="mcol">
+				<!-- <div id="mid_section">&nbsp;</div>-->
+				
+
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org/",
+  "@type": "Product",
+  "name": "Seiko Automatic SNK795 SNK795K1 SNK795K Mens Watch",
+  "image": [
+            "http://cdn.creationwatches.com/products/images/ebayimages/SNK795K1.jpg"
+        ],
+  "brand": {
+	  "@type": "Brand",
+	  "name": "Seiko"
+  },
+    "aggregateRating": {
+		"@type": "AggregateRating",
+		"ratingValue": "5",
+		"reviewCount": "7"
+	},
+    "sku": "SNK795K1",
+  "mpn": "SNK795K1",
+  "description": "Seiko Automatic SNK795 SNK795K1 SNK795K Men's Watch  It’s an automatic that is one of the best candidates among sturdy, purpose-driven affordable watches and punches way above its weight. Offering a great value for money, it’s a high quality, automatic watch with which, few watches can compete. It’s clean and classy, sporty and durable and combines the best in sporty elegance, durability and robustness. Suitable as both an office and a casual wear.Features:Stainless Steel CaseStainless Steel BraceletAutomatic Movement21 JewelsHardlex CrystalBlack DialDay And Date DisplayLuminous Hands And Marker'sSee-Through Case BackFold-Over Clasp With Push Button30m Water ResistanceApproximate Case Diameter: 37mmApproximate Case Thickness: 17mm",
+  "offers" :{	  
+	  "availability" : "InStock",
+	  "priceCurrency" : "USD " ,	  
+	  	  "price" : "99",
+	  	  "url" : "https://www.creationwatches.com/products/seiko-automatic-sports-89/seiko-automatic-snk795-snk795k1-snk795k-mens-watch-1709.html?currency=USD",
+	  "priceValidUntil": "December 1, 2021"
+	  
+  }
+
+    ,
+  "review": [
+		  {
+			"@type": "Review",
+			"reviewRating": {
+				"@type": "Rating",
+				"ratingValue": "5",
+				"bestRating": "5",
+				"worstRating": "0"
+			},
+			"author": {
+				"@type": "Person",
+				"name": "Pedro Martinez Cruz"
+			},
+			"datePublished": "2019-10-26 15:46:11",
+			"reviewBody": "Mi experiencia totalmente negativa, pedí un reloj barato para probar  etc. y los gastos que me acarrearon son muy excesivos, por lo que rompo relación. Te remito factura CONFIRMACIÓN DE PAGO DE ARANCEL/IMPUESTO DE IMPORTACIÓN
+	 
+  	
+ 
+Hola EAT P/C PEDRO MARTINEZ CRUZ,
+ 
+Gracias por pagar el arancel/impuesto de importación pendiente de su envío DHL Express ​con albarán número 4516275632 de RSL.
+
+Para gestionar la entrega o seguir su envío, haga clic aquí.
+	  	
+Paid Online
+ 
+DETALLES DE PAGO
+Cantidad pagada
+	€ 34.69
+ID de transacción
+	14343803-2135805
+Fecha de pago
+	25/10/2019
+ 
+INFORMACIÓN DE ENVÍO
+Nº de albarán
+	4516275632
+Dirección
+	MARTINEZ DE VEGA 40-BAJO MAPRISE EMAIL: PEMACR@HOTMAIL.COM 33600 MIERES"
+	   }
+	,	  {
+			"@type": "Review",
+			"reviewRating": {
+				"@type": "Rating",
+				"ratingValue": "5",
+				"bestRating": "5",
+				"worstRating": "0"
+			},
+			"author": {
+				"@type": "Person",
+				"name": "jean-frederic wedeux"
+			},
+			"datePublished": "2019-07-17 00:11:35",
+			"reviewBody": "beautiful watch. according to my expectations. Damage that the customs fees are the surprise on delivery.
+cordially"
+	   }
+	,	  {
+			"@type": "Review",
+			"reviewRating": {
+				"@type": "Rating",
+				"ratingValue": "5",
+				"bestRating": "5",
+				"worstRating": "0"
+			},
+			"author": {
+				"@type": "Person",
+				"name": "Pablo"
+			},
+			"datePublished": "2019-03-15 23:05:28",
+			"reviewBody": "Ha tardado 26 dias en llegar con correo ordinario, pero a mercido la pena el reloj a venido bien embalado y todo correcto, estoy contento con la compra que he hecho."
+	   }
+	,	  {
+			"@type": "Review",
+			"reviewRating": {
+				"@type": "Rating",
+				"ratingValue": "5",
+				"bestRating": "5",
+				"worstRating": "0"
+			},
+			"author": {
+				"@type": "Person",
+				"name": "Vincent Hodierne"
+			},
+			"datePublished": "2019-01-28 18:32:29",
+			"reviewBody": "Beautiful Watch !"
+	   }
+	,	  {
+			"@type": "Review",
+			"reviewRating": {
+				"@type": "Rating",
+				"ratingValue": "5",
+				"bestRating": "5",
+				"worstRating": "0"
+			},
+			"author": {
+				"@type": "Person",
+				"name": "Vincent"
+			},
+			"datePublished": "2019-01-28 18:31:43",
+			"reviewBody": "Beautiful Watch, the bracelet is not compatible with my hairy arm, it will be beautiful with a  NATO"
+	   }
+	,	  {
+			"@type": "Review",
+			"reviewRating": {
+				"@type": "Rating",
+				"ratingValue": "5",
+				"bestRating": "5",
+				"worstRating": "0"
+			},
+			"author": {
+				"@type": "Person",
+				"name": "Juan de Castellón"
+			},
+			"datePublished": "2018-12-14 18:05:54",
+			"reviewBody": "Muy contento, la verdad, compré un Seiko snk795 a menos de la mitad del precio de Amazon, tardó sólo 9 días desde que lo enviaron.Tuve suerte,ni se retrasó siendo épocas prenavideñas, ni lo pararon en aduanas y creo que es porque el tipo de envío standar.El producto perfecto, adjuntan una caja de cartón plegada sin marca, algo es algo. Garantía sellada, aunque no se si servirá. Repetiré."
+	   }
+	,	  {
+			"@type": "Review",
+			"reviewRating": {
+				"@type": "Rating",
+				"ratingValue": "5",
+				"bestRating": "5",
+				"worstRating": "0"
+			},
+			"author": {
+				"@type": "Person",
+				"name": "Marcin"
+			},
+			"datePublished": "2018-09-19 17:34:51",
+			"reviewBody": "Watch came quick without dhl or tracking. No extra fees. Definitely gonna order more"
+	   }
+	   ]
+  }
+</script>
+	
+<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "OfferShippingDetails",
+		"deliveryTime": {
+			"@type": "ShippingDeliveryTime",
+			"transitTime": {
+				"@type": "QuantitativeValue",
+				"minValue": 7,
+				"maxValue": 14,
+				"unitCode": "d"
+			}
+		},
+		"shippingRate": {
+			"@type": "MonetaryAmount",
+			"value": 0,
+			"currency": "USD"
+		}
+	}
+</script>
+
+<link rel="stylesheet" type="text/css" href="https://cdn.creationwatches.com/products/includes/templates/creation/css/jRating.jquery-min.css" />
+<script defer src="https://cdn.creationwatches.com/products/includes/templates/creation/jscript/jRating.jquery.min.js"></script>
+
+
+
+<style>
+
+
+
+
+ul.product-check-list-hor {list-style: none; margin-bottom: 20px;}
+ul.product-check-list-hor li:before {  content:"\2714\0020"; color: #2C93CC;}
+ul.product-check-list-hor li{ font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-weight: bold; color: #333; float:left; margin: 4px; border: 1px solid #2C93CC; padding: 3px;} 
+
+.video-responsive {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.video-responsive iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 90%;
+	height: 90%;
+}
+
+</style>
+<!--<div class="lin-show-box"><a href="https://www.creationwatches.com/products/">Home</a>&nbsp;::&nbsp;<a href="https://www.creationwatches.com/products/seiko-75/">Seiko</a>&nbsp;::&nbsp;<a href="https://www.creationwatches.com/products/seiko-automatic-sports-89/seiko-automatic-snk795-snk795k1-snk795k-mens-watch-1709.html">Seiko Automatic SNK795 SNK795K1 SNK795K Men's Watch</a></div>-->
+<div class="lin-show-box"><a href="/">Home</a>&nbsp;::&nbsp;<a href="https://www.creationwatches.com/products/seiko-watches-127/">Seiko Watches</a>&nbsp;::&nbsp;<a href="https://www.creationwatches.com/products/seiko-automatic-sports-89/">Seiko Automatic Sports</a>&nbsp;::&nbsp;Seiko Automatic SNK795 SNK795K1 SNK795K Men's Watch</div>
+
+<!-- <div id="product_section">&nbsp;</div>-->
+<div class="section">
+<div class="shadow-box2" style="margin:0 2px;">
+
+<!----------- product banner ------------------>
+
+<div class="pro-det-lcol">
+<div class="row">
+<div class="img-box2">
+
+    <script type="text/javascript" defer  src="https://cdn.creationwatches.com/products/includes/templates/creation/jscript/jquery.lightbox1-0.5.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.creationwatches.com/products/includes/templates/creation/css/jquery.lightbox-0.5.css" media="screen" />
+
+<script language="javascript" type="text/javascript"><!--
+//document.write('<a href="javascript:popupWindow(\'https://www.creationwatches.com/products/index.php?main_page=popup_image&amp;pID=1709\')"><img src="https://cdn.creationwatches.com/products/images/medium/SNK795K1_MED.jpg" border="0" alt="Seiko Automatic SNK795 SNK795K1 SNK795K Men\'s Watch" title=" Seiko Automatic SNK795 SNK795K1 SNK795K Men\'s Watch " hspace="5" vspace="5" id="imgbig" /><div align="center">larger image</div></a>');
+
+document.write('<div align="center" id="gallery1" style="width:300px; height:400px"><a id="imglink" href="https://cdn.creationwatches.com/products/images/large/SNK795K1_LRG.jpg" title="Seiko Automatic SNK795 SNK795K1 SNK795K Men\'s Watch" $(\'#gallery\').lightBox();"><img src="https://cdn.creationwatches.com/products/images/medium/SNK795K1_MED.jpg" border="0" alt="Seiko Automatic SNK795 SNK795K1 SNK795K Men\'s Watch" title=" Seiko Automatic SNK795 SNK795K1 SNK795K Men\'s Watch " width="300" height="" hspace="5" vspace="5" id="imgbig" itemprop="image" /></div>');
+
+$(function() {  
+        $('#gallery a').lightBox();
+		$('#gallery1 a').lightBox();
+    }); 
+//--></script>
+</div>
+</div>
+<div class="row bdr" style="margin:0 10px;">
+
+ <div id="gallery">
+  
+
+
+<script language="javascript" type="text/javascript">
+
+document.write('<a class="img-box3" href="https://cdn.creationwatches.com/products/images/large/SNK795K1_LRG.jpg" title="Seiko Automatic SNK795 SNK795K1 SNK795K Men\'s Watch"><img src="https://cdn.creationwatches.com/products/images/SNK795K1.jpg" border="0" alt="Seiko Automatic SNK795 SNK795K1 SNK795K Men\'s Watch" title=" Seiko Automatic SNK795 SNK795K1 SNK795K Men\'s Watch " width="50" height="50" hspace="5" vspace="5" /></a>');
+
+//--></script>
+
+
+
+
+
+
+  
+
+
+<script language="javascript" type="text/javascript">
+
+document.write('<a class="img-box3" href="https://cdn.creationwatches.com/products/images/large/SNK795K1_2_LRG.jpg" title="Seiko Automatic SNK795 SNK795K1 SNK795K Men\'s Watch"><img src="https://cdn.creationwatches.com/products/images/SNK795K1_2.jpg" border="0" alt="Seiko Automatic SNK795 SNK795K1 SNK795K Men\'s Watch" title=" Seiko Automatic SNK795 SNK795K1 SNK795K Men\'s Watch " width="50" height="50" hspace="5" vspace="5" /></a>');
+
+//--></script>
+
+
+
+
+
+
+  
+
+
+<script language="javascript" type="text/javascript">
+
+document.write('<a class="img-box3" href="https://cdn.creationwatches.com/products/images/large/SNK795K1_3_LRG.jpg" title="Seiko Automatic SNK795 SNK795K1 SNK795K Men\'s Watch"><img src="https://cdn.creationwatches.com/products/images/SNK795K1_3.jpg" border="0" alt="Seiko Automatic SNK795 SNK795K1 SNK795K Men\'s Watch" title=" Seiko Automatic SNK795 SNK795K1 SNK795K Men\'s Watch " width="50" height="50" hspace="5" vspace="5" /></a>');
+
+//--></script>
+
+
+
+
+
+
+  
+
+
+<script language="javascript" type="text/javascript">
+
+document.write('<a class="img-box3" href="https://cdn.creationwatches.com/products/images/large/SNK795K1_4_LRG.jpg" title="Seiko Automatic SNK795 SNK795K1 SNK795K Men\'s Watch"><img src="https://cdn.creationwatches.com/products/images/SNK795K1_4.jpg" border="0" alt="Seiko Automatic SNK795 SNK795K1 SNK795K Men\'s Watch" title=" Seiko Automatic SNK795 SNK795K1 SNK795K Men\'s Watch " width="50" height="50" hspace="5" vspace="5" /></a>');
+
+//--></script>
+
+
+
+
+
+
+  
+
+
+<script language="javascript" type="text/javascript">
+
+document.write('<a class="img-box3" href="https://cdn.creationwatches.com/products/images/large/SNK795K1_5_LRG.jpg" title="Seiko Automatic SNK795 SNK795K1 SNK795K Men\'s Watch"><img src="https://cdn.creationwatches.com/products/images/SNK795K1_5.jpg" border="0" alt="Seiko Automatic SNK795 SNK795K1 SNK795K Men\'s Watch" title=" Seiko Automatic SNK795 SNK795K1 SNK795K Men\'s Watch " width="50" height="50" hspace="5" vspace="5" /></a>');
+
+//--></script>
+
+
+
+
+
+
+  
+
+
+<script language="javascript" type="text/javascript">
+
+document.write('<a class="img-box3" href="https://cdn.creationwatches.com/products/images/large/SNK795K1_6_LRG.jpg" title="Seiko Automatic SNK795 SNK795K1 SNK795K Men\'s Watch"><img src="https://cdn.creationwatches.com/products/images/SNK795K1_6.jpg" border="0" alt="Seiko Automatic SNK795 SNK795K1 SNK795K Men\'s Watch" title=" Seiko Automatic SNK795 SNK795K1 SNK795K Men\'s Watch " width="50" height="50" hspace="5" vspace="5" /></a>');
+
+//--></script>
+
+
+
+
+
+
+  
+
+
+<script language="javascript" type="text/javascript">
+
+document.write('<a class="img-box3" href="https://cdn.creationwatches.com/products/images/large/SNK795K1_7_LRG.jpg" title="Seiko Automatic SNK795 SNK795K1 SNK795K Men\'s Watch"><img src="https://cdn.creationwatches.com/products/images/SNK795K1_7.jpg" border="0" alt="Seiko Automatic SNK795 SNK795K1 SNK795K Men\'s Watch" title=" Seiko Automatic SNK795 SNK795K1 SNK795K Men\'s Watch " width="50" height="50" hspace="5" vspace="5" /></a>');
+
+//--></script>
+
+
+
+
+
+    </div><script type="text/javascript" >
+
+function change_img(path1, path2)
+{
+	
+	document.getElementById('imgbig').src = path2;
+	document.getElementById('imglink').href = path1;
+}
+
+</script>
+
+</a>
+<div class="clr"></div>
+</div>
+
+
+</div>
+<!----------- product banner ------------------>
+
+
+<div class="pro-det-rcol">
+<div>
+<div class="pd-row">
+<h1 class="heading10"><span  >Seiko Automatic SNK795 SNK795K1 SNK795K Men's Watch</span></h1>
+<p class="para8">Model: SNK795K1</p>
+<div class="rating" style="">
+<div style="float:left; padding-right:10px;"><div class="exemple4" data-average="20" ></div></div>  
+<div style="float:left;  font-size:15px">
+<div >
+<span >5</span>/5 (<a href="/products/seiko-automatic-sports-89/seiko-automatic-snk795-snk795k1-snk795k-mens-watch-1709.html?currency=USD#reviews"><span >7</span> customer reviews </a>)</div>
+</div>
+<div class="clr"></div>
+</div>
+</div>
+<div >
+
+		
+		
+
+<div class="pd-row">
+<div class="fl">
+<!-- <div class="price-discount1">38%<br /><span>OFF</span></div> -->
+
+
+
+<form name="currencies" action="https://www.creationwatches.com/products/" method="get"> <span style="font-size:15px; display: inline-block; width: 80px;">Currency:</span><select name="currency" style="margin-bottom:15px" class="select-box" onchange="dataLayer.push({'event': 'change_currency'}); this.form.submit();" ><option value="AUD">Australian Dollar (AU $)</option><option value="BRL">Brazilian Real (R$)</option><option value="CAD">Canadian Dollar (CA $)</option><option value="DKK">Danish Krone (kr.)</option><option value="EUR">Euro (&#8364;)</option><option value="HKD">Hong Kong Dollar</option><option value="INR">Indian Rupees (INR)</option><option value="JPY">Japanese Yen (&#165;)</option><option value="KRW">Korean Won (&#x20a9;)</option><option value="NOK">Norwegian Krone (kr.)</option><option value="NZD">NZ Dollar (NZ $)</option><option value="RUB">Russian Ruble (p.)</option><option value="SGD">Singapore Dollar (SG $)</option><option value="SEK">Swedish Krona (kr.)</option><option value="CHF">Swiss Franc (Fr.)</option><option value="AED">UAE Dirham (د.إ)</option><option value="GBP">UK Pound (&#163;)</option><option value="USD" selected="selected">US Dollar (US $)</option><option value="VND">Vietnamese Dong (đ)</option></select><input type="hidden" name="main_page" value="product_info" /><input type="hidden" name="products_id" value="1709" /></form>
+<p class="product-price1"><span style="display: inline-block; width: 80px;">List Price:</span> 
+<del>US $160.00</del> 
+</p>
+
+
+
+
+
+
+
+<p class="product-price1"><span style="display: inline-block; width: 80px;">Price:</span> <span class="red" style="font-weight:bold"  >US $99.00</span> </p>
+<p class="product-price1" style="margin-bottom:0px"><span style="display: inline-block; width: 80px;">You Save:</span> <span class="red" style="font-size:12px">US $61.00 (38% off)</span></p>
+
+<div class="clr"></div>
+</div>
+
+<div class="pd-sale-txt">
+<img src="https://cdn.creationwatches.com/products/includes/templates/creation/cssimages/promotional-txt-500.png" alt="Creationwatches Promotional Text" /> 
+</div>
+
+<div class="clr"></div>
+</div>
+
+
+<div class="pd-row">
+<div class="fl">
+<a href="#" class="stock"><img src="https://cdn.creationwatches.com/products/includes/templates/creation/cssimages/tick1.png" width="16" height="16" />
+In Stock
+</a>
+
+</div>
+<div class="fr">
+
+<a  class="freeship"><img src="https://cdn.creationwatches.com/products/includes/templates/creation/cssimages/free-shipping.png" alt="Free Shipping" />Free Shipping Worldwide</a> 
+		<span style="font-size:15px; color:#424242;">(Usually ships in 24 hours)</span></div>
+<div class="clr"></div>	
+	<div class="" style="margin-top:10px">
+
+
+</div>
+<div class="clr"></div>
+</div>
+
+
+
+<div class="pd-row" >
+<form name="cart_quantity" id="cart_quantity" action="https://www.creationwatches.com/products/index.php?main_page=shopping_cart&amp;action=add_product" method="post">
+<div style="float:left">
+<select class="select-box" name="cart_quantity"  style="width:45px; margin-bottom:0px" onchange="javascript:qty_change(this.value)">
+	<option value="1" >1</option><option value="2" >2</option><option value="3" >3</option><option value="4" >4</option><option value="5" >5</option><option value="6" >6</option><option value="7" >7</option><option value="8" >8</option><option value="9" >9</option><option value="10" >10</option></select>
+</div>
+<div style="float:left; margin-left:10px">
+<input type="hidden" name="products_id" value="1709" /><input type="image" src="https://cdn.creationwatches.com/products/includes/templates/creation/buttons/english/button_in_cart.gif" alt="Add to Cart" title=" Add to Cart " id="prod-details-buy-now-button" onclick="javascript:ec_click1('1709', 'Seiko Automatic SNK795 SNK795K1 SNK795K Men\'s Watch')" /></div>
+<!-- <a class="add-crt-btn fr" href="#"><img src="images/click-btn.png" />BUY WITH 1 CLICK</a>-->
+</form>
+ <div class="btn-exp-or" style="margin-left:2px" >-- OR --</div> 
+<div  class="btn-exp-chkout" style="margin-left:2px">
+<form action="/products/paypalexpress/ReviewOrder.php" method="POST">
+
+<input type="hidden" name="ctoken" value="9150de88ae172a3f578780110805d512">
+<input type="hidden" name="paymentType" value="Sale">
+<input type="hidden" id="exp_amt" name="paymentAmount" value="99" /><input type="hidden" name="hl" value="en" /><input type="hidden" name="currencyCodeType" value="USD" /><input type="hidden" name="currencyCodeValue" value="1.00000000" /><input type="hidden" id="exp_item" name="items" value="1 x SNK795K1" /><input type="hidden" id="exp_desc" name="items_desc" value="1  x Seiko SNK795K1" /><input type="hidden" id="products_items" name="products_items" value="1  x SNK795K1" /><input type="hidden" name="total_item" value="1" /><input type="image" name="submit" src="https://cdn.creationwatches.com/products/images/checkout-logo-medium.png"> 
+</form>
+</div>
+<div class="clr"></div>
+</div>
+<div class="pd-row bt-center" style="display:none;">
+<div class="not-for-sale">Not available for sale</div>
+</div>
+<script type="text/javascript" >
+
+// The product being viewed.
+ga('ec:addProduct', {                 // Provide product details in an productFieldObject.
+  'id': '1709',                     // Product ID (string).
+  'name': 'Seiko Automatic SNK795 SNK795K1 SNK795K Men\'s Watch',  // Product name (string).
+ // 'category': '',     // Product category (string).
+  'brand': 'Seiko',                 // Product brand (string).
+//  'variant': 'gray',                  // Product variant (string).
+ // 'position': 2                       // Product position (number).
+});
+
+ga('ec:setAction', 'detail');       // Detail action.
+
+</script>
+<script type="text/javascript">
+
+function ec_click1(id, name)
+{
+	qty = $('#prod_qty').val() ;
+	ga('ec:addProduct',{
+ 
+	'id': id, // Product ID/SKU - Type: string
+ 	'name': name, // Product name - Type: string
+	'brand': 'Seiko',  
+ 	'quantity': qty, // Product quantity - Type: numeric
+ 	'price': 99 // The price of a product (e.g. 29.20).
+ 	});
+ 
+	ga('ec:setAction', 'add'); // send 'add' or 'remove'
+  ga('send', 'event', 'UX', 'click', 'add to cart');     // Send 'add to cart' or 'remove from cart' using an event.
+	
+}
+
+function ec_click(id, name, qty, price, brand ='')
+{
+	
+	ga('ec:addProduct',{
+ 
+	'id': id, // Product ID/SKU - Type: string
+ 	'name': stripslashes(name), // Product name - Type: string
+ 	'quantity': qty, // Product quantity - Type: numeric
+ 	'price': price, // The price of a product (e.g. 29.20).,
+	'brand' : brand
+ 	});
+ 
+	ga('ec:setAction', 'add'); // send 'add' or 'remove'
+  ga('send', 'event', 'UX', 'click', 'add to cart');     // Send 'add to cart' or 'remove from cart' using an event.
+
+}
+
+
+function stripslashes(str) {
+ 
+  return (str + '')
+    .replace(/\\(.?)/g, function(s, n1) {
+      switch (n1) {
+        case '\\':
+          return '\\';
+        case '0':
+          return '\u0000';
+        case '':
+          return '';
+        default:
+          return n1;
+      }
+    });
+}
+
+window.dataLayer = window.dataLayer || [];
+
+window.dataLayer.push({
+	event: 'eec.detail',
+	ecommerce: {
+		detail: {
+			actionField: {
+				list: 'Search Results'
+			},
+			products: [{
+				id: '1709',
+				name: 'Seiko Automatic SNK795 SNK795K1 SNK795K Men\'s Watch',
+				currency: 'USD',
+				price: '99'
+			}]
+		}
+	}
+});
+
+</script>
+<div class="pd-row" style="border-bottom:none;">
+<div class="fl para8">
+<div style="font-size:13px; padding-bottom:4px">Share: </div> 
+<div class="share42init"></div>
+<script type="text/javascript" src="https://cdn.creationwatches.com/products/js/share/share42.js"></script>
+
+
+</div>
+<div class="fr para8" style="text-align: left; font-size: 14px; padding-top: 4px;"></div>
+<div class="clr"></div>
+</div>
+
+</div>
+</div>
+</div>
+<div class="clr"></div>
+</div>
+</div>
+ <script type="text/javascript">
+
+  $(function() {
+	jQuery('base').remove();
+    $( "#tabs" ).tabs();
+  } );
+  </script>
+  
+  
+  <!--<div class="section">
+  <ul class="product-check-list-hor">
+	  <li>Authenticity Guaranteed</li>
+	  <li>Free Shipping Worldwide</li>
+	  <li>International Warranty</li>
+	  <li>250,000+ Satisfied Customers</li>
+	  <li>Online since 2006</li>
+	</ul>
+  </div> -->
+ <div style="clear:both" ></div>
+<div class="section">
+
+ 
+ 
+         
+ 
+
+  
+  <div class="desc">
+    	
+	<h2 class="heading5" style="font-weight: lighter;">Seiko SNK795K1 Details</h2> 
+    <p><strong>Seiko Automatic SNK795 SNK795K1 SNK795K Men's Watch</strong> </br></br> It’s an automatic that is one of the best candidates among sturdy, purpose-driven affordable watches and punches way above its weight. Offering a great value for money, it’s a high quality, automatic watch with which, few watches can compete. It’s clean and classy, sporty and durable and combines the best in sporty elegance, durability and robustness. Suitable as both an office and a casual wear.</p><p><Strong>Features:</Strong><br><br>Stainless Steel Case<br>Stainless Steel Bracelet<br>Automatic Movement<br>21 Jewels<br>Hardlex Crystal<br>Black Dial<br>Day And Date Display<br>Luminous Hands And Marker's<br>See-Through Case Back<br>Fold-Over Clasp With Push Button<br>30m Water Resistance<br><br>Approximate Case Diameter: 37mm<br>Approximate Case Thickness: 17mm<br></p>    
+	 
+		
+		<div class="section">
+	<div class="desc">
+	<div class="heading5">Shipping & Packaging</div>
+	<div class="">
+	<p><strong>Packaging:</strong> Shipped in Seiko box with all the product documents(depending on shipping method chosen at checkout).</p><p>Box is secured in an additional super-strong non-collapsing cardboard box.</p><p><strong>Warranty:</strong> 1-2 years International Warranty. Refer to Warranty section for more information.</p>	<p><strong>Guaranteed 100% genuine and brand new. </strong></p>
+	
+	<p class="rb"><a href='https://www.creationwatches.com/products/shipping.php' target='_blank' rel='nofollow'>(Shipping Info)</a></p>
+	<p class="rb">Read customer testimonials from your country <a href='https://www.creationwatches.com/products/index.php?main_page=customer_testimonials&amp;country=RU' target='_blank' rel='nofollow'>here</a></p>
+
+	</div>
+
+
+	</div>
+	</div>
+	    <div class="detail-box">
+      <h4>Information</h4> 
+      <div class="detail-boxppara">
+        <div class="col1">Brand:</div>
+        <div class="col2">Seiko</div>
+      </div>
+            <div class="detail-boxppara">
+       <div class="col1">Series:</div>			
+       <div class="col2">Seiko 5</div>
+      </div>
+            <div class="detail-boxppara">
+       <div class="col1">Model:</div>			
+       <div class="col2">SNK795K1</div>
+      </div>
+	        <div class="detail-boxppara">  
+       <div class="col1">Gender:</div>			
+       <div class="col2">Men's</div>
+      </div>
+            <div class="detail-boxppara"> 
+       <div class="col1">Movement:</div>			
+       <div class="col2">Automatic Movement</div>
+      </div>
+                </div>
+    
+        <div class="detail-box">
+      <h4>Case</h4>
+            <div class="detail-boxppara"> 
+       <div class="col1">Case Size:</div>			
+       <div class="col2">37mm</div>
+      </div>
+            <div class="detail-boxppara"> 
+        <div class="col1">Case Thickness:</div>		
+        <div class="col2">17mm</div>
+      </div>
+            <div class="detail-boxppara"> 
+        <div class="col1">Case Material:</div>		
+        <div class="col2">Stainless Steel</div>
+      </div>
+            <div class="detail-boxppara"> 
+        <div class="col1">Case Shape:</div>		
+        <div class="col2">Round</div>
+      </div>
+            <div class="detail-boxppara">
+        <div class="col1">Case Back:</div>			
+        <div class="col2">See Through Case Back</div>
+      </div>
+            <div class="detail-boxppara">
+        <div class="col1">Bezel:</div>			
+        <div class="col2">Fixed Bezel</div>
+    </div>
+	    </div>
+            
+    <div class="detail-box">
+      <h4>Dial</h4>
+            <div class="detail-boxppara">
+       <div class="col1">Dial Type:</div>			
+       <div class="col2">Analog</div>
+      </div>
+            <div class="detail-boxppara">
+        <div class="col1">Dial Color:</div>			
+        <div class="col2">Black</div>
+      </div>
+            <div class="detail-boxppara">
+        <div class="col1">Crystal:</div>		
+        <div class="col2">Hardlex</div>
+      </div>
+            <div class="detail-boxppara">		
+        <div class="col1">Dial Markers:	</div>	
+        <div class="col2">Index</div>
+      </div>
+          </div>
+         <div class="detail-box">
+     <h4>Features</h4>
+           <div class="detail-boxppara">	
+       <div class="col1">Water Resistance:</div>	
+       <div class="col2">30M</div>
+     </div>
+          <div class="detail-boxppara">
+       <div class="col1">Calendar:</div>			
+       <div class="col2">Day And Date Display</div>
+     </div>
+          <div class="detail-boxppara">
+       <div class="col1">Functions:</div>			
+       <div class="col2">Day, Date, Hour, Minute, Second</div>
+     </div>
+          <div class="detail-boxppara">
+      <div class="col1">Features:</div>			
+      <div class="col2">Analog Display, 30M Water Resistance</div>
+     </div>
+	     </div>
+        <div class="detail-box">
+     <h4>Band</h4>
+          <div class="detail-boxppara">
+       <div class="col1">Band Type:</div>
+       <div class="col2">Bracelet</div>
+     </div>
+          <div class="detail-boxppara">
+       <div class="col1">Band Material:</div>		
+       <div class="col2">Stainless Steel</div>
+     </div>
+          <div class="detail-boxppara">
+       <div class="col1">Clasp:	</div>
+       <div class="col2">Deployment Clasp</div>
+     </div>
+	      </div>
+	     
+   <div class="detail-box">
+     <h4>Additional Info</h4> 
+	      <div class="detail-boxppara">
+       <div class="col1">Style:	</div>		
+       <div class="col2">Dress</div>
+     </div>
+          <div class="detail-boxppara">
+       <div class="col1">Warranty:</div>			
+       <div class="col2">1 Year International Warranty</div>
+     </div>
+          <div class="detail-boxppara">
+       <div class="col1">EAN Code:</div>			
+       <div class="col2">4954628029461</div>
+     </div>
+          <div class="detail-boxppara">
+       <div class="col1">Internal ID:</div>			
+       <div class="col2">SNK795K1</div>
+     </div>
+          <div class="detail-boxppara">
+       <div class="col1">Product Category:</div>	
+       <div class="col2">Watches</div>
+      </div>
+	   </div>
+		  </div>
+  
+
+</div>
+
+
+
+
+<a name="reviews"></a>
+<div class="section4">
+<h3 class="heading5" style="margin-bottom:14px; font-weight: lighter">Seiko SNK795K1 Reviews </h3>
+
+<div class="section5">
+<div class="fl" style="width:40%">
+ <div class="review-head">5.0</div>
+ <!--<div class="review-star">
+   <div class="rating">
+	<img src="/products/images/reviews/star5.gif" alt="review rating image" width="60" border="0" height="12">	</div>
+   <span class="txt">7 Reviews</span>
+ </div>-->
+</div>
+
+<a href='https://www.creationwatches.com/products/index.php?main_page=write_review&product_id=1709' target='_blank' class='btn2 fr'>+ Add  a Review</a>
+<div class="clr"></div>
+</div>
+
+ 
+
+	<div class="section5">
+	
+	<div class="rating">
+	<img src='/products/images/reviews/star5.gif' width='60' height='12' border='0' alt='review rating image'/>	</div>
+	
+	<p> Mi experiencia totalmente negativa, pedí un reloj barato para probar  etc. y los gastos que me acarrearon son muy excesivos, por lo que rompo relación. Te remito factura CONFIRMACIÓN DE PAGO DE ARANCEL/IMPUESTO DE IMPORTACIÓN
+	 
+  	
+ 
+Hola EAT P/C PEDRO MARTINEZ CRUZ,
+ 
+Gracias por pagar el arancel/impuesto de importación pendiente de su envío DHL Express ​con albarán número 4516275632 de RSL.
+
+Para gestionar la entrega o seguir su envío, haga clic aquí.
+	  	
+Paid Online
+ 
+DETALLES DE PAGO
+Cantidad pagada
+	€ 34.69
+ID de transacción
+	14343803-2135805
+Fecha de pago
+	25/10/2019
+ 
+INFORMACIÓN DE ENVÍO
+Nº de albarán
+	4516275632
+Dirección
+	MARTINEZ DE VEGA 40-BAJO MAPRISE EMAIL: PEMACR@HOTMAIL.COM 33600 MIERES</p>
+    <div class="review-author">Review by: Pedro Martinez Cruz </div>
+			<div class="review-verified-purchase" style="color: #c45500;"><b>Verified Purchase</b></div>
+		
+		</div>
+
+		<div class="section5">
+	
+	<div class="rating">
+	<img src='/products/images/reviews/star5.gif' width='60' height='12' border='0' alt='review rating image'/>	</div>
+	
+	<p> beautiful watch. according to my expectations. Damage that the customs fees are the surprise on delivery.
+cordially</p>
+    <div class="review-author">Review by: jean-frederic wedeux </div>
+			<div class="review-verified-purchase" style="color: #c45500;"><b>Verified Purchase</b></div>
+		
+		</div>
+
+		<div class="section5">
+	
+	<div class="rating">
+	<img src='/products/images/reviews/star5.gif' width='60' height='12' border='0' alt='review rating image'/>	</div>
+	
+	<p> Ha tardado 26 dias en llegar con correo ordinario, pero a mercido la pena el reloj a venido bien embalado y todo correcto, estoy contento con la compra que he hecho.</p>
+    <div class="review-author">Review by: Pablo </div>
+		</div>
+
+		<div class="section5">
+	
+	<div class="rating">
+	<img src='/products/images/reviews/star5.gif' width='60' height='12' border='0' alt='review rating image'/>	</div>
+	
+	<p> Beautiful Watch !</p>
+    <div class="review-author">Review by: Vincent Hodierne </div>
+			<div class="review-verified-purchase" style="color: #c45500;"><b>Verified Purchase</b></div>
+		
+		</div>
+
+		<div class="section5">
+	
+	<div class="rating">
+	<img src='/products/images/reviews/star5.gif' width='60' height='12' border='0' alt='review rating image'/>	</div>
+	
+	<p> Beautiful Watch, the bracelet is not compatible with my hairy arm, it will be beautiful with a  NATO</p>
+    <div class="review-author">Review by: Vincent </div>
+		</div>
+
+		<div class="section5">
+	
+	<div class="rating">
+	<img src='/products/images/reviews/star5.gif' width='60' height='12' border='0' alt='review rating image'/>	</div>
+	
+	<p> Muy contento, la verdad, compré un Seiko snk795 a menos de la mitad del precio de Amazon, tardó sólo 9 días desde que lo enviaron.Tuve suerte,ni se retrasó siendo épocas prenavideñas, ni lo pararon en aduanas y creo que es porque el tipo de envío standar.El producto perfecto, adjuntan una caja de cartón plegada sin marca, algo es algo. Garantía sellada, aunque no se si servirá. Repetiré.</p>
+    <div class="review-author">Review by: Juan de Castellón </div>
+		</div>
+
+		<div class="section5">
+	
+	<div class="rating">
+	<img src='/products/images/reviews/star5.gif' width='60' height='12' border='0' alt='review rating image'/>	</div>
+	
+	<p> Watch came quick without dhl or tracking. No extra fees. Definitely gonna order more</p>
+    <div class="review-author">Review by: Marcin </div>
+		</div>
+
+	<div class="display-heading-box">
+
+<div class="fr pagina">
+ &nbsp; 
+</div>
+<div class="clr"></div>
+</div>
+</div>
+
+
+ <!--<div class="heading1">
+You may also like:</div> -->
+
+
+
+
+<!-- bof: featured products  -->
+<div class="heading1"> Latest Promotions </div>
+          <div class="section">
+            <div class="row bdr-left">
+              
+   
+
+  
+		
+		<div class="item-conte">
+			<div class="discount-tag1"> 38%<br /><span>OFF</span> </div>
+			<a href="https://www.creationwatches.com/products/orient-watches-252/orient-star-elegant-classic-automatic-power-reserve-sel09001w-el09001w-mens-watch-9452.html"><img src="https://cdn.creationwatches.com/products/images/SEL09001W.jpg" border="0" alt="Orient Star Elegant Classic Automatic Power Reserve SEL09001W EL09001W Men's Watch" title=" Orient Star Elegant Classic Automatic Power Reserve SEL09001W EL09001W Men's Watch " width="152" height="200" /></a>
+			<p class="para1"><a href="https://www.creationwatches.com/products/orient-watches-252/orient-star-elegant-classic-automatic-power-reserve-sel09001w-el09001w-mens-watch-9452.html">Orient Star Elegant Classic Automatic Power Reserve SEL09001W EL09001W Men's Watch</a></p>
+			<p class="price1"><del>US $660.00</del> <span>US $407.00</span></p>
+			<a href="https://www.creationwatches.com/products/index.php?main_page=product_info&amp;products_id=9452&amp;action=buy_now" class="standard-buy-btn" onclick="javascript:ec_click('9452', 'Orient Star Elegant Classic Automatic Power Reserve SEL09001W EL09001W Men\'s Watch', 1, 407,'Orient')">Add to Cart</a>
+		</div><script type="text/javascript" >ga('ec:addImpression', {            // Provide product details in an impressionFieldObject.
+  'id': '9452',                   // Product ID (string).
+  'name': 'Orient Star Elegant Classic Automatic Power Reserve SEL09001W EL09001W Men\'s Watch'
+  , 'brand' : 'Orient'
+});
+</script>		<!-- <td align="center" class="smallText" width="25%" valign="top">	
+		<form name="multiple_products_cart_quantity" action="https://www.creationwatches.com/products/index.php?main_page=index&amp;products_id=1709&amp;currency=USD&amp;action=add_product" method="post" enctype="multipart/form-data">		<div class="item-conte">
+			<div class="discount-tag1"> 38%<br /><span>OFF</span> </div>
+			<a href="https://www.creationwatches.com/products/orient-watches-252/orient-star-elegant-classic-automatic-power-reserve-sel09001w-el09001w-mens-watch-9452.html"><img src="https://cdn.creationwatches.com/products/images/SEL09001W.jpg" border="0" alt="Orient Star Elegant Classic Automatic Power Reserve SEL09001W EL09001W Men's Watch" title=" Orient Star Elegant Classic Automatic Power Reserve SEL09001W EL09001W Men's Watch " width="152" height="200" /></a>
+			<p class="para1"><a href="https://www.creationwatches.com/products/orient-watches-252/orient-star-elegant-classic-automatic-power-reserve-sel09001w-el09001w-mens-watch-9452.html">Orient Star Elegant Classic Automatic Power Reserve SEL09001W EL09001W Men's Watch</a></p>
+			<p class="price1"><del>US $660.00</del> <span>US $407.00</span></p>
+			<a href="https://www.creationwatches.com/products/index.php?main_page=product_info&amp;products_id=9452&amp;action=buy_now" class="standard-buy-btn" onclick="javascript:ec_click('9452', 'Orient Star Elegant Classic Automatic Power Reserve SEL09001W EL09001W Men\'s Watch', 1, 407,'Orient')">Add to Cart</a>
+		</div><script type="text/javascript" >ga('ec:addImpression', {            // Provide product details in an impressionFieldObject.
+  'id': '9452',                   // Product ID (string).
+  'name': 'Orient Star Elegant Classic Automatic Power Reserve SEL09001W EL09001W Men\'s Watch'
+  , 'brand' : 'Orient'
+});
+</script></form>    
+		</td> -->
+		  
+		
+		<div class="item-conte">
+			<div class="discount-tag1"> 50%<br /><span>OFF</span> </div>
+			<a href="https://www.creationwatches.com/products/seiko-automatic-sports-89/seiko-5-sports-automatic-snzg11-snzg11k1-snzg11k-mens-watch-2885.html"><img src="https://cdn.creationwatches.com/products/images/SNZG11K1.jpg" border="0" alt="Seiko 5 Sports Automatic SNZG11 SNZG11K1 SNZG11K Men's Watch" title=" Seiko 5 Sports Automatic SNZG11 SNZG11K1 SNZG11K Men's Watch " width="152" height="200" /></a>
+			<p class="para1"><a href="https://www.creationwatches.com/products/seiko-automatic-sports-89/seiko-5-sports-automatic-snzg11-snzg11k1-snzg11k-mens-watch-2885.html">Seiko 5 Sports Automatic SNZG11 SNZG11K1 SNZG11K Men's Watch</a></p>
+			<p class="price1"><del>US $250.00</del> <span>US $126.00</span></p>
+			<a href="https://www.creationwatches.com/products/index.php?main_page=product_info&amp;products_id=2885&amp;action=buy_now" class="standard-buy-btn" onclick="javascript:ec_click('2885', 'Seiko 5 Sports Automatic SNZG11 SNZG11K1 SNZG11K Men\'s Watch', 1, 126,'Seiko')">Add to Cart</a>
+		</div><script type="text/javascript" >ga('ec:addImpression', {            // Provide product details in an impressionFieldObject.
+  'id': '2885',                   // Product ID (string).
+  'name': 'Seiko 5 Sports Automatic SNZG11 SNZG11K1 SNZG11K Men\'s Watch'
+  , 'brand' : 'Seiko'
+});
+</script>		<!-- <td align="center" class="smallText" width="25%" valign="top">	
+		<form name="multiple_products_cart_quantity" action="https://www.creationwatches.com/products/index.php?main_page=index&amp;products_id=1709&amp;currency=USD&amp;action=add_product" method="post" enctype="multipart/form-data">		<div class="item-conte">
+			<div class="discount-tag1"> 50%<br /><span>OFF</span> </div>
+			<a href="https://www.creationwatches.com/products/seiko-automatic-sports-89/seiko-5-sports-automatic-snzg11-snzg11k1-snzg11k-mens-watch-2885.html"><img src="https://cdn.creationwatches.com/products/images/SNZG11K1.jpg" border="0" alt="Seiko 5 Sports Automatic SNZG11 SNZG11K1 SNZG11K Men's Watch" title=" Seiko 5 Sports Automatic SNZG11 SNZG11K1 SNZG11K Men's Watch " width="152" height="200" /></a>
+			<p class="para1"><a href="https://www.creationwatches.com/products/seiko-automatic-sports-89/seiko-5-sports-automatic-snzg11-snzg11k1-snzg11k-mens-watch-2885.html">Seiko 5 Sports Automatic SNZG11 SNZG11K1 SNZG11K Men's Watch</a></p>
+			<p class="price1"><del>US $250.00</del> <span>US $126.00</span></p>
+			<a href="https://www.creationwatches.com/products/index.php?main_page=product_info&amp;products_id=2885&amp;action=buy_now" class="standard-buy-btn" onclick="javascript:ec_click('2885', 'Seiko 5 Sports Automatic SNZG11 SNZG11K1 SNZG11K Men\'s Watch', 1, 126,'Seiko')">Add to Cart</a>
+		</div><script type="text/javascript" >ga('ec:addImpression', {            // Provide product details in an impressionFieldObject.
+  'id': '2885',                   // Product ID (string).
+  'name': 'Seiko 5 Sports Automatic SNZG11 SNZG11K1 SNZG11K Men\'s Watch'
+  , 'brand' : 'Seiko'
+});
+</script></form>    
+		</td> -->
+		  
+		
+		<div class="item-conte">
+			<div class="discount-tag1"> 44%<br /><span>OFF</span> </div>
+			<a href="https://www.creationwatches.com/products/seiko-automatic-sports-89/seiko-5-military-automatic-sports-snzg09-snzg09k1-snzg09k-mens-watch-3004.html"><img src="https://cdn.creationwatches.com/products/images/SNZG09K1.jpg" border="0" alt="Seiko 5 Military Automatic Sports SNZG09 SNZG09K1 SNZG09K Men's Watch" title=" Seiko 5 Military Automatic Sports SNZG09 SNZG09K1 SNZG09K Men's Watch " width="152" height="200" /></a>
+			<p class="para1"><a href="https://www.creationwatches.com/products/seiko-automatic-sports-89/seiko-5-military-automatic-sports-snzg09-snzg09k1-snzg09k-mens-watch-3004.html">Seiko 5 Military Automatic Sports SNZG09 SNZG09K1 SNZG09K Men's Watch</a></p>
+			<p class="price1"><del>US $250.00</del> <span>US $139.00</span></p>
+			<a href="https://www.creationwatches.com/products/index.php?main_page=product_info&amp;products_id=3004&amp;action=buy_now" class="standard-buy-btn" onclick="javascript:ec_click('3004', 'Seiko 5 Military Automatic Sports SNZG09 SNZG09K1 SNZG09K Men\'s Watch', 1, 139,'Seiko')">Add to Cart</a>
+		</div><script type="text/javascript" >ga('ec:addImpression', {            // Provide product details in an impressionFieldObject.
+  'id': '3004',                   // Product ID (string).
+  'name': 'Seiko 5 Military Automatic Sports SNZG09 SNZG09K1 SNZG09K Men\'s Watch'
+  , 'brand' : 'Seiko'
+});
+</script>		<!-- <td align="center" class="smallText" width="25%" valign="top">	
+		<form name="multiple_products_cart_quantity" action="https://www.creationwatches.com/products/index.php?main_page=index&amp;products_id=1709&amp;currency=USD&amp;action=add_product" method="post" enctype="multipart/form-data">		<div class="item-conte">
+			<div class="discount-tag1"> 44%<br /><span>OFF</span> </div>
+			<a href="https://www.creationwatches.com/products/seiko-automatic-sports-89/seiko-5-military-automatic-sports-snzg09-snzg09k1-snzg09k-mens-watch-3004.html"><img src="https://cdn.creationwatches.com/products/images/SNZG09K1.jpg" border="0" alt="Seiko 5 Military Automatic Sports SNZG09 SNZG09K1 SNZG09K Men's Watch" title=" Seiko 5 Military Automatic Sports SNZG09 SNZG09K1 SNZG09K Men's Watch " width="152" height="200" /></a>
+			<p class="para1"><a href="https://www.creationwatches.com/products/seiko-automatic-sports-89/seiko-5-military-automatic-sports-snzg09-snzg09k1-snzg09k-mens-watch-3004.html">Seiko 5 Military Automatic Sports SNZG09 SNZG09K1 SNZG09K Men's Watch</a></p>
+			<p class="price1"><del>US $250.00</del> <span>US $139.00</span></p>
+			<a href="https://www.creationwatches.com/products/index.php?main_page=product_info&amp;products_id=3004&amp;action=buy_now" class="standard-buy-btn" onclick="javascript:ec_click('3004', 'Seiko 5 Military Automatic Sports SNZG09 SNZG09K1 SNZG09K Men\'s Watch', 1, 139,'Seiko')">Add to Cart</a>
+		</div><script type="text/javascript" >ga('ec:addImpression', {            // Provide product details in an impressionFieldObject.
+  'id': '3004',                   // Product ID (string).
+  'name': 'Seiko 5 Military Automatic Sports SNZG09 SNZG09K1 SNZG09K Men\'s Watch'
+  , 'brand' : 'Seiko'
+});
+</script></form>    
+		</td> -->
+		  
+		
+		<div class="item-conte">
+			<div class="discount-tag1"> 59%<br /><span>OFF</span> </div>
+			<a href="https://www.creationwatches.com/products/orient-watches-252/orient-bambino-version-4-automatic-fac08002f0-mens-watch-11546.html"><img src="https://cdn.creationwatches.com/products/images/FAC08002F0.jpg" border="0" alt="Orient Bambino Version 4 Automatic FAC08002F0 Men's Watch" title=" Orient Bambino Version 4 Automatic FAC08002F0 Men's Watch " width="152" height="200" /></a>
+			<p class="para1"><a href="https://www.creationwatches.com/products/orient-watches-252/orient-bambino-version-4-automatic-fac08002f0-mens-watch-11546.html">Orient Bambino Version 4 Automatic FAC08002F0 Men's Watch</a></p>
+			<p class="price1"><del>US $320.00</del> <span>US $130.00</span></p>
+			<a href="https://www.creationwatches.com/products/index.php?main_page=product_info&amp;products_id=11546&amp;action=buy_now" class="standard-buy-btn" onclick="javascript:ec_click('11546', 'Orient Bambino Version 4 Automatic FAC08002F0 Men\'s Watch', 1, 130,'Orient')">Add to Cart</a>
+		</div><script type="text/javascript" >ga('ec:addImpression', {            // Provide product details in an impressionFieldObject.
+  'id': '11546',                   // Product ID (string).
+  'name': 'Orient Bambino Version 4 Automatic FAC08002F0 Men\'s Watch'
+  , 'brand' : 'Orient'
+});
+</script>		<!-- <td align="center" class="smallText" width="25%" valign="top">	
+		<form name="multiple_products_cart_quantity" action="https://www.creationwatches.com/products/index.php?main_page=index&amp;products_id=1709&amp;currency=USD&amp;action=add_product" method="post" enctype="multipart/form-data">		<div class="item-conte">
+			<div class="discount-tag1"> 59%<br /><span>OFF</span> </div>
+			<a href="https://www.creationwatches.com/products/orient-watches-252/orient-bambino-version-4-automatic-fac08002f0-mens-watch-11546.html"><img src="https://cdn.creationwatches.com/products/images/FAC08002F0.jpg" border="0" alt="Orient Bambino Version 4 Automatic FAC08002F0 Men's Watch" title=" Orient Bambino Version 4 Automatic FAC08002F0 Men's Watch " width="152" height="200" /></a>
+			<p class="para1"><a href="https://www.creationwatches.com/products/orient-watches-252/orient-bambino-version-4-automatic-fac08002f0-mens-watch-11546.html">Orient Bambino Version 4 Automatic FAC08002F0 Men's Watch</a></p>
+			<p class="price1"><del>US $320.00</del> <span>US $130.00</span></p>
+			<a href="https://www.creationwatches.com/products/index.php?main_page=product_info&amp;products_id=11546&amp;action=buy_now" class="standard-buy-btn" onclick="javascript:ec_click('11546', 'Orient Bambino Version 4 Automatic FAC08002F0 Men\'s Watch', 1, 130,'Orient')">Add to Cart</a>
+		</div><script type="text/javascript" >ga('ec:addImpression', {            // Provide product details in an impressionFieldObject.
+  'id': '11546',                   // Product ID (string).
+  'name': 'Orient Bambino Version 4 Automatic FAC08002F0 Men\'s Watch'
+  , 'brand' : 'Orient'
+});
+</script></form>    
+		</td> -->
+		  
+
+ 
+              <div class="clr"></div>
+            </div>
+          </div>
+<!-- eof: featured products  -->
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+		$(document).ready(function(){
+			
+			$('.exemple4').jRating({
+				isDisabled : true
+			});
+
+		});	
+		
+	</script>
+<script type="text/javascript" >
+
+function qty_change(value)
+{
+	//alert(val) ;
+	var final_total = 99 * value; 
+	var my_currency = "" ; 
+	var total_amt = value * 99 ;
+	if(my_currency != "")
+		$('#exp_item').val(value +" x SNK795K1 ("+my_currency+" "+final_total+")") ;
+	else
+		$('#exp_item').val(value +" x SNK795K1") ;
+	$('#exp_desc').val(value +" x Orient") ;
+	$('#products_items').val(value +" x SNK795K1") ;
+	$('#exp_amt').val(total_amt ) ;
+	
+}
+
+</script> 
+
+
+<script> (function() { var v = document.getElementsByClassName("youtube-player"); for (var n = 0; n < v.length; n++) { v[n].onclick = function () { var iframe = document.createElement("iframe"); iframe.setAttribute("src", "//www.youtube.com/embed/" + this.dataset.id + "?autoplay=1&autohide=2&border=0&wmode=opaque&enablejsapi=1&rel="+ this.dataset.related +"&controls="+this.dataset.control+"&showinfo=" + this.dataset.info); iframe.setAttribute("frameborder", "0"); iframe.setAttribute("id", "youtube-iframe"); iframe.setAttribute("style", "width: 100%; height: 100%; position: absolute; top: 0; left: 0;"); if (this.dataset.fullscreen == 1){ iframe.setAttribute("allowfullscreen", ""); } while (this.firstChild) { this.removeChild(this.firstChild); } this.appendChild(iframe); }; } })(); </script>
+    
+
+
+    
+<!--<script src="/products/includes/templates/creation/jscript/lightslider.js"></script> -->
+    
+				</div>
+			<div class="clr"></div>
+		</div>
+		<div class="section" style="">
+			<div class="row addico">
+			  <ul class="dislogos" style="text-align:center;">
+								
+				<!--<li><a  class="two"  href="https://tracedseals.starfieldtech.com/siteseal/verify?sealId=55e4ye7y7mb730b3c8d53355a93f7wemnzxy7mb7355e4ye7a87f00e14e769e4a" rel="nofollow" target="_blank" style="text-decoration:none"></a></li>-->
+				
+				<!--<li><a  class="three" href="http://www.europeantop100.de/cgi-bin/megatoplist/toplist.pl?action=click_in&amp;account=creationwatches" target="_blank" rel="nofollow"></a></li>-->
+				
+				<!-- <li><a  class="four" href="http://www.amazon.com/b/qid=1306398112?ie=UTF8&amp;me=A1DGD346C4AXB3" target="_blank" rel="nofollow"></a></li> -->
+				
+				
+				<li><a class=""  target="_blank" rel="nofollow"><img src="https://www.creationwatches.com/products/includes/templates/creation/cssimages/ebay_logo.png" /></a></li>
+				<li><a class="" rel="nofollow" target="_blank" ><img src="https://www.creationwatches.com/products/includes/templates/creation/cssimages/elite_seal.png" /></a></li>
+				
+				<li><a class="" rel="nofollow" style="text-decoration:none" target="_blank" ><img src="https://www.creationwatches.com/products/includes/templates/creation/cssimages/logo_comodo_secure.png" /></a></li>
+				
+				<li><a  class="" rel="nofollow" style="text-decoration:none" target="_blank" ><img src="https://www.creationwatches.com/products/includes/templates/creation/cssimages/securi.png" /></a></li>
+				
+				<li ><a class="" target="_blank" href="https://www.reviews.io/company-reviews/store/rspl"><img src="https://www.creationwatches.com/products/includes/templates/creation/cssimages/reviews-io.png" alt="Reviwes IO" /></a></li>
+				
+				<li style="margin-right:0px;"><a href="https://www.resellerratings.com/store/Creation_Watches" onclick="window.open('https://www.resellerratings.com/store/Creation_Watches','name','height=760,width=780,scrollbars=1'); 
+        return false;"><img src="https://www.creationwatches.com/products/includes/templates/creation/cssimages/customer-love-us.png" alt="Customer Love Us" oncontextmenu="alert('Copying Prohibited by Law - ResellerRatings seal is a Trademark of All Enthusiast, Inc.'); return false;" /></a></li>
+				
+				<div class="clr"></div>
+			  </ul>
+			</div>
+		  </div>
+		  			</div>
+</div>
+
+<div class="footer">
+    <div class="main-wrapper">
+      <div style="height:14px;"></div>
+      <div class="subscribe-box" style="">
+        <div class="subs-col1">
+          <span>Sign Up For Special Offers:</span>
+          <form id="email_news" method="post" action="https://madmimi.com/signups/subscribe/46205">
+            <input class="subtxt" type="text" name="signup[email]" id="signup_email" placeholder="enter email address" />
+            <button class="subbtn" type="submit" id="button" name="commit">Sign Up</button>
+          </form>
+		  
+		  <script>
+			$( "#email_news" ).submit(function( event ) {
+				
+				var email_data = $('#signup_email').val(); 
+				if(IsEmail(email_data)){
+					$.ajax({
+							type: "POST",
+							url: "https://madmimi.com/signups/subscribe/46205",
+							data: "signup[email]="+email_data,
+							complete: function(){
+																	document.location.href = 'https://www.creationwatches.com/products/thank-you.html';
+															}
+						});
+				}else{					
+					swal ( "Invalid Email" ,  "Please provide a valid email!" ,  "error" ); 					
+				}
+				event.preventDefault();
+			});
+			
+			function IsEmail(email) {
+				  var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+				  if(!regex.test(email)) {
+					return false;
+				  }else{
+					return true;
+				  }
+				}
+		  </script>
+          <div class="clr"></div>
+        </div>
+        <div class="subs-col2"><div class="">
+</div>
+</div>
+        <div class="subs-col3">
+          <span>We Accept:<img src="/products/includes/templates/creation/images/card-paypal.png"  style="height: 26px;" alt="PayPal Cards" /><!-- <div  class="accept"></div> --></span>
+          <div class="clr"></div>
+        </div>
+        <div class="clr"></div>
+      </div>
+      <div class="footer-section">
+        <div class="fcol-one">
+          <div class="heading3 bdr-bottom2"> Information </div>
+          <div class="section1 bdr-bottom2">
+            <ul class="list-twofo mar_r10">
+				<li><a href="https://www.creationwatches.com/products/" >Shop</a></li>
+			   					
+					<li><a href="/aboutus.html" >About Us</a></li>
+					<li><a href="/contactus.html" >Contact Us</a></li>
+					<li><a href="/products/shipping.html">Shipping</a></li>
+				              <li><a href="https://www.creationwatches.com/products/index.php?main_page=orderstatus" style="text-decoration:none" >Track Order</a></li>
+              <li><a href="http://www.creationwatches.com/watchblog/">Blog</a></li>
+              <li><a href="https://www.creationwatches.com/products/index.php?main_page=customer_testimonials">Testimonials</a></li>
+			                <li><a href="/whyus.html">Why Us</a></li>
+			              </ul>
+            <ul class="list-twofo">
+			              <li><a href="/privacy.html">Privacy Policy</a></li>
+              <li><a href="/warranty.html">Warranty</a></li>
+              <li><a href="/returns.html">Returns / Exchange</a></li>
+              <li><a href="/faq.html">FAQ</a></li>
+              <li><a href="/terms.html">Terms and Conditions</a></li>
+              <li><a href="/packagetracking.html">Package Tracking</a></li>
+			  	
+            </ul>
+            <div class="clr"></div>
+          </div>
+		   
+          <div class="nomob">
+                        <p class="para4">We use cookies to provide and improve our services. By using our site, you consent to cookies.&nbsp;<a href="/privacy.html">Learn more</a></p>
+			
+            <p class="para4">By using our website you agree to our <a href="/terms.html">Terms</a> and <a href="/privacy.html">Privacy Policy</a></p>
+			<p class="para3">Copyright &copy; Creation Watches. All Brand Names are Registered Trademarks of their Respective Holders.</p>
+            <!--<p class="para3">All Brand Names are Registered Trademarks of their Respective Holders.</p>-->
+          </div>
+        </div>
+        <div class="fcol-two" >
+          <div class="heading3 bdr-bottom2" style="display : "> Our Collection </div>
+          <div class="section1">
+            <ul class="list-threefo mar_r9" style="display : ">
+              <li><a href="https://www.creationwatches.com/products/citizen-divers-aqualand-49/">Citizen Aqualand Watches</a></li>
+              <li><a href="https://www.creationwatches.com/products/seiko-automatic-watches-69/">Seiko Automatic Watches</a> </li>
+              <li><a href="https://www.creationwatches.com/products/seiko-ladies-diamond-78/">Ladies Diamond Watches</a></li>
+              <li><a href="https://www.creationwatches.com/products/seiko-kinetic-68/">Seiko Kinetic Watches</a> </li>
+              <li><a href="https://www.creationwatches.com/products/seiko-premier-72/">Seiko Premier Watches</a></li>
+              <li><a href="https://www.creationwatches.com/products/seiko-perpetual-calendar-62/">Seiko Perpetual Calendar Watches</a></li>
+              <li><a href="https://www.creationwatches.com/products/seiko-velatura-79/" >Seiko Velatura Watches</a></li>
+              <li><a href="https://www.creationwatches.com/products/seiko-chronograph-watches-63/">Seiko Chronograph Watches</a></li>
+              <li><a href="https://www.creationwatches.com/products/seiko-direct-drive-94/">Seiko Kinetic Direct Drive Watches</a></li>
+              <li><a href="https://www.creationwatches.com/products/seiko-divers-60/">Seiko Diver Watches</a></li>
+            </ul>
+            <ul class="list-threefo mar_r9" style="display : ">
+              <li><a href="https://www.creationwatches.com/products/seiko-watches-127/">Seiko Watches</a></li>
+              <li><a href="https://www.creationwatches.com/products/seiko-automatic-premier-84/">Seiko Automatic Premier Watches</a></li>
+              <li><a href="https://www.creationwatches.com/products/seiko-automatic-sports-89/">Seiko Automatic Sports Watches</a></li>
+              <li><a href="https://www.creationwatches.com/products/seiko-japan-82/">Seiko Japan Automatic Watches</a></li>
+              <li><a href="https://www.creationwatches.com/products/seiko-divers-automatic-90/">Seiko Diver's Automatic Watches</a></li>
+              <li><a href="https://www.creationwatches.com/products/seiko-divers-kinetic-91/">Seiko Diver's Kinetic Watches</a></li>
+              <li> <a href="https://www.creationwatches.com/products/seiko-sportura-66/">Seiko Sportura Watches</a></li>
+              <li> <a href="https://www.creationwatches.com/products/seiko-arctura-59/">Seiko Arctura Watches</a></li>
+              <li><a href="https://www.creationwatches.com/products/seiko-world-timer-81/">Seiko World Timer Watches</a></li>
+              <li><a href="https://www.creationwatches.com/products/seiko-titanium-210/">Seiko Titanium Watches</a></li>
+            </ul>
+            <ul class="list-threefo" style="display : ">
+              <li><a href="https://www.creationwatches.com/products/casio-watches-155/">Casio Watches</a></li>
+              <li><a href="https://www.creationwatches.com/products/casio-g-shock-57/">Casio G-Shock Watches</a></li>
+              <li><a href="https://www.creationwatches.com/products/casio-protrek-58/">Casio Protrek Watches</a></li>
+              <li> <a href="https://www.creationwatches.com/products/casio-ladies-baby-g-65/">Casio Baby-G Watches</a></li>
+              <li><a href="https://www.creationwatches.com/products/hamilton-watches-250/">Hamilton Watches</a></li>
+              <li><a href="https://www.creationwatches.com/products/orient-watches-252/">Orient Watches</a></li>
+             <!-- <li><a href="https://www.creationwatches.com/products/nautica-watches-253/">Nautica Watches</a></li>
+              <li><a href="https://www.creationwatches.com/products/jacques-lemans-212/">Jacques Lemans Watches</a></li> -->
+              <li><a href="https://www.creationwatches.com/products/tissot-watches-209/">Tissot Watches</a></li>
+              <li><a href="https://www.creationwatches.com/products/tissot-t-touch-183/">Tissot T-Touch Watches</a></li>
+            </ul>
+            <div class="clr"></div>
+            <div class="mob">
+             <p class="para4">We use cookies to provide and improve our services. By using our site, you consent to cookies.<a href="/privacy.html">Learn more</a></p>
+			
+            <p class="para4">By using our website you agree to our <a href="/terms.html">Terms</a> and <a href="/privacy.html">Privacy Policy</a></p>
+			<p class="para3">Copyright &copy; Creation Watches. All Brand Names are Registered Trademarks of their Respective Holders.</p>
+            </div>
+          </div>
+        </div>
+        <div class="clr"></div>
+      </div>
+    </div>
+  </div>
+
+
+ 
+<!-- css and js for review listing pagination in product details page -->
+ <!-- Send the Page view to analytics --> 
+<script type="text/javascript">
+  ga('send', 'pageview');
+  ga('cwnew.send', 'pageview');
+</script>
+
+
+<div id="c-mask" class="c-mask"></div><!-- /c-mask -->
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+<script>
+   /* var rs_rum_id = "593d17e2-90e2-44a5-aa51-27b335c343e2";
+    var rs_acc_id = "c7ef79eb-ba74-4afe-92f7-07fd8d7794bb";
+    (function() {
+        var s = document.getElementsByTagName("script")[0], r = document.createElement("script");
+        r.async = "async"; r.src = "//cdn-assets.rapidspike.com/static/js/timingcg.min.js";
+        s.parentNode.insertBefore(r, s);
+    })();*/
+</script>
+
+ <!-- <script async src="https://cdn.creationwatches.com/products/includes/templates/creation/owl-carousel/owl.carousel1.min.js"></script> -->
+
+ <script  src="https://cdn.creationwatches.com/products/includes/templates/creation/jscript/jquery.dd1.min.js" type="text/javascript"></script>  
+ <script async src="https://cdn.creationwatches.com/products/includes/templates/creation/jscript/sweet-alert1.min.js"></script>
+<script async type="text/javascript" src="https://cdn.creationwatches.com/products/includes/templates/creation/jscript/cre.cookies.min.js"></script>
+
+<script>
+
+$(document).ready(function(){
+        $("#c-button--slide-right").click(function(){
+            $("#c-menu--slide-right").animate({
+                width: "toggle"
+            });
+			$( ".c-mask" ).toggleClass( "is-active" );
+        });
+		
+		$(".c-menu__close").click(function(){
+			
+					
+            $("#c-menu--slide-right").animate({
+                width: "toggle"
+            });
+			$( ".c-mask" ).toggleClass( "is-active" );
+			
+			 
+		
+        });
+    });
+
+	
+</script>
+
+<script type="text/javascript">
+
+ $(document).ready(function () {
+    $("#mcart").hover(
+
+    function () {
+        $("#mcartcontent").show();
+    }, function () {
+        $("#mcartcontent").hide();
+    });
+	
+
+	// set the language menu 
+	$("#tech").msDropdown().data();
+	
+	$("#tech1").msDropdown().data();
+	
+	$("#tech2").msDropdown().data();
+
+	
+
+ }); 
+/* $.ajax({
+	type: "GET",
+	url:"ajax_func.php",
+	data: "func=get_left_cat&main_page=product_info&products_id=1709&currency=USD",
+	success:function(result){
+		$('#leftcat').html(result) ; 
+	}
+  }); */
+  
+$.ajax({
+	type: "GET",
+	url:"https://www.creationwatches.com/products/ajax_func.php",
+	data: "func=get_featured&main_page=product_info&products_id=1709&currency=USD",
+	success:function(result){
+		$('#leftfeatured').html(result) ; 
+	}
+  });
+
+ $.ajax({
+	type: "GET",
+	url:"/products/ajax_func.php",
+	data: "func=get_special&main_page=product_info&products_id=1709&currency=USD",
+	success:function(result){
+		$('#leftspecials').html(result) ; 
+	}
+  }); 
+  
+  $.ajax({
+	type: "GET",
+	url:"/products/ajax_func.php",
+	data: "func=get_bestsellers&main_page=product_info&products_id=1709&currency=USD",
+	success:function(result){
+		$('#leftbestseller').html(result) ; 
+	}
+  });
+  
+  $.ajax({
+	type: "GET",
+	url:"/products/ajax_func.php",
+	data: "func=get_testimonials&main_page=product_info&products_id=1709&currency=USD",
+	success:function(result){
+		$('#leftcusttest').html(result) ; 
+	}
+  });
+$(function() {
+	
+	
+	$.ajax({
+	type: "GET",
+	url:"/products/ajax_func.php",
+	data: "func=get_minicart",
+	success:function(result){
+  
+		$('#mcartcontent').html(result) ; 
+  
+	}
+  });
+  
+  $.ajax({
+	type: "GET",
+	url:"/products/ajax_func.php",
+	data: "func=get_minicart_qty",
+	success:function(result){
+		$('#mini_cart_qty').html(result) ; 
+	}
+  });
+  
+})
+
+
+</script>
+<script>
+    (function(){
+        try {
+            var timeInterval = setInterval(function () { 
+
+				if(!$.cookie('gclientid')){
+					var clientId = ga.getAll()[0].get('clientId') ;
+					$.cookie('gclientid', clientId, { path: '/' });
+					$.ajax({
+						type: "GET",
+						url:"ajax_func.php",
+						data: "func=set_google_session&gclientid="+clientId,
+						success:function(result){
+					   
+					  
+						}
+					  });
+				}
+            }, 100);
+
+            setTimeout(function () {
+                clearInterval(timeInterval)
+            }, 5000);
+        }
+        catch(e){ }
+    })();
+</script>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"6e7fff0139","applicationID":"162370612","transactionName":"MgdbNxNSXkVZVxUKCgtNbBEIHEBEV1AUABEWTVANBVZIGEhcEQ==","queueTime":0,"applicationTime":80,"atts":"HkBYQVtITUs=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+	  </html>
