@@ -2,25 +2,18 @@
 # -*- coding: utf-8 -*-
 ##/usr/bin/env python
 
-# https://python-scripts.com/scrapy-example
-#
-# python3 -m venv scrapy_env
-# source scrapy_env/bin/activate
-
 import logging, os, sys, subprocess, re, datetime
 
 
 def main(argv):
-    # Использование из cli: 
-    # sudo ./scrapit.py creationwatches.com
-
+    
     # set up logging to file
     logging.basicConfig(
         filename='scrapit.log',
         level=logging.DEBUG,   
         # format= '[%(asctime)s] {%(pathname)s:%(lineno)d} %(levelname)s - %(message)s',
-        format='%(name)s - %(levelname)s - %(message)s',
-        datefmt='%H:%M:%S'
+        format='[%(asctime)s] %(name)s - %(levelname)s - %(message)s',
+        datefmt='%y-%m-%d %H:%M:%S'
     )
     # set up logging to console
     console = logging.StreamHandler()

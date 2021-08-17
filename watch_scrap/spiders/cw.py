@@ -7,7 +7,7 @@ class CwSpider(scrapy.Spider):
     allowed_domains = ['creationwatches.com']
     # start_urls = ['http://creationwatches.com/']
     # start_urls = ['https://www.creationwatches.com/products/seiko-automatic-sports-89/seiko-automatic-snk795-snk795k1-snk795k-mens-watch-1709.html?currency=USD']
-    start_urls = ['file:///home/vital/work/scrap/tmp.html']
+    start_urls = ['file:///home/vital/work/scrapit/cw01.html']
 
     def parse(self, response):
         # pass
@@ -51,3 +51,6 @@ class CwSpider(scrapy.Spider):
 
 
 # ">Price:</span>.*US \$([0-9\.]*)</span>"
+
+# SOLD OUT:
+# response.xpath('/html/body/div[2]/div[2]/div/div[1]/div[3]/div[2]/div/div[2]/div/div[2]/div[2]/form/div[1]/span').get()
